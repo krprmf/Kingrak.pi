@@ -1,0 +1,9 @@
+data_phase1.csv         900 rows
+data_phase2.csv         1200 rows (รวมข้อมูลของ phase 1) + new column ("Reference_title")
+raw_scopus_data.csv     20216 rows ข้อมูลที่ถูกจัดให้อยู่ใน df
+
+run docker compose up -d for kafka
+
+run redis with this command
+
+docker run --name my-redis -p 6379:6379 -d redis
