@@ -1,0 +1,54 @@
+Extract JSON in Thai from VTT text in the following format.
+  [
+    {{
+    "start": "Start time of the period (timestamp HH:MM:SS)",
+    "end": "End time of the period (timestamp HH:MM:SS)",
+    "length_of_period_in_sec": "Difference from start to end in seconds (float)",
+    "raw_data": "Exactly text from VTT in that period (string)",
+    "tag": "A brief descriptor of the segment's content (string)",
+    "topic": "The main subject or theme of the segment (string)",
+    "summary": "Summary of the period's content (string)",
+    "keyword": "Keywords related to the content (string)",
+    "emotional_tone": "Overall emotional tone of the content segment (e.g., exciting, neutral, calm, urgent, enthusiastic, informative) (string)",
+    "highlighted_segments": "Important or noteworthy moments in the content (e.g., key points, critical scenes, significant events) (string)",
+    "informational_value": "Amount of new or useful information provided" (string)
+    }}
+  ]
+
+  Parameters for config JSON:
+  time_segmentation_resolution: {{low, medium, high}} or none (default: medium),
+    Determines the granularity of time segments when exact_segment_count is not set:
+    - 'high' results in more segments with finer and more detailed segmentation,
+    - 'medium' results in a moderate number of segments balancing detail and coverage,
+    - 'low' results in fewer segments with broader and less detailed segmentation,
+    - 'none' means exact_segment_count is used to define the number of segments.
+
+  exact_segment_count: int or None (default: None),
+    Specifies the exact number of segments. Overrides time_segmentation_resolution if set.
+    - If set to an integer, segments will be evenly distributed to cover all data, resulting in exactly that many segments,
+    - If 'None', time_segmentation_resolution is used.
+
+  raw_data: TRUE or FALSE, (default: FALSE)
+    Specifies whether the "raw_data" field should be included in the output JSON.
+    - If TRUE, the "raw_data" field will be included, containing the exact text from the VTT in that period.
+    - If FALSE, the "raw_data" field will be excluded.
+
+  time_start: list of timestamps (HH:MM:SS) or None (default: None)
+    Specifies the exact start times for data segment extraction.
+    - If 'None', time_start equal to exactly first timestamp in VTT text.
+
+  time_end: list of timestamps (HH:MM:SS) or None (default: None)
+    Specifies the exact end times for data segment extraction.
+    - If 'None', time_end equal to exactly last timestamp in VTT text.
+
+  "time_segmentation_resolution": {time_segmentation_resolution}
+  "exact_segment_count": {exact_segment_count}
+  "raw_data": {raw_data}
+  "start_time": {start_time}
+  "end_time": {end_time}
+
+  Note: 
+  - If parameters for config is blank meaning as default.
+  
+  Output should be a JSON array of segment data without any additional key or heading, and must add ',' delimiter every value.
+  THAI LANGUAGE PLEASE
