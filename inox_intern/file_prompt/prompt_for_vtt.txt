@@ -30,7 +30,7 @@ Extract JSON in Thai from VTT text in the following format.
 
   raw_data: TRUE or FALSE, (default: FALSE)
     Specifies whether the "raw_data" field should be included in the output JSON.
-    - If TRUE, the "raw_data" field will be included, containing the exact text from the VTT in that period.
+    - If TRUE, the "raw_data" field will be included, containing the exact text from the VTT in that period. Please give only text without timecode.
     - If FALSE, the "raw_data" field will be excluded.
 
   time_start: list of timestamps (HH:MM:SS) or None (default: None)
