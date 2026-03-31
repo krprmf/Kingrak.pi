@@ -15,30 +15,47 @@ I'm a **Data Scientist & AI-Augmented Developer** from Bangkok, Thailand.
 
 M.Sc. Computer Engineering @ Chulalongkorn University (GPA 4.00) | B.Eng. Electrical Engineering @ Chula
 
-I love using **Python + AI tools** to build things that actually work in the real world -- from data pipelines and ML models to full-stack web platforms. I believe the future belongs to people who can *think* like engineers and *ship* with AI.
+Python is my main language -- I use it for everything from data pipelines and ML models to backend APIs. For the rest (frontend, web flows), I leverage **AI tools** to help me build and ship full-stack products. I believe the future belongs to people who can *think* like engineers and *ship* with AI.
 
-**Currently into:** LLM prompt engineering, building with AI, data engineering, and making cool side projects.
+**Currently:** Data Scientist @ [VEKIN](https://vekin.tech/) (Deep Tech for Sustainability) -- working on the DEMP platform.
+
+**Into:** LLM prompt engineering, AI-augmented development, data engineering, and cool side projects.
 
 ---
 
 ### Tech Stack
 
-<p align="center">
+**Core -- what I actually write myself:**
+<p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white"/>
   <img src="https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white"/>
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white"/>
+</p>
+
+**AI & ML:**
+<p>
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
   <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/>
   <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black"/>
+  <img src="https://img.shields.io/badge/LLM_Prompt_Engineering-6C63FF?style=flat-square&logoColor=white"/>
+</p>
+
+**Data Engineering & Viz:**
+<p>
   <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white"/>
   <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
   <img src="https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black"/>
   <img src="https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white"/>
+</p>
+
+**AI-Augmented Dev -- I use AI tools to build with these:**
+<p>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Django_DRF-092E20?style=flat-square&logo=django&logoColor=white"/>
+  <img src="https://img.shields.io/badge/OAuth_2.0-4285F4?style=flat-square&logo=google&logoColor=white"/>
 </p>
 
 ---
@@ -68,7 +85,7 @@ I love using **Python + AI tools** to build things that actually work in the rea
 - I make coffee almost as well as I write prompts (barista life)
 - Photography, guitar, and animation keep my creative side alive
 - Went on Work & Travel USA (summer 2025) -- best decision ever
-- I believe in: **"Use AI to build, use brain to think"**
+- My motto: **"Python is home, AI is the vehicle, data is the fuel"**
 
 ---
 
@@ -81,4 +98,4 @@ I love using **Python + AI tools** to build things that actually work in the rea
   <img src="https://komarev.com/ghpvc/?username=krprmf&color=6C63FF&style=flat-square&label=Profile+Views"/>
 </p>
 
-<p align="center"><i>"Bridging data science, AI, and engineering -- one prompt at a time."</i></p>
+<p align="center"><i>"I write Python. AI writes the rest. Together we ship."</i></p>
