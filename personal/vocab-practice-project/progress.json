@@ -1,0 +1,173 @@
+{
+  "words": {
+    "ventilation": {
+      "box": 1,
+      "last_review": "2026-03-23",
+      "correct": 1,
+      "wrong": 2
+    },
+    "steep": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 3
+    },
+    "courteously": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 2
+    },
+    "proceeds": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 3
+    },
+    "hold": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 0
+    },
+    "dedication": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 0
+    },
+    "lawn": {
+      "box": 1,
+      "last_review": "2026-03-23",
+      "correct": 1,
+      "wrong": 2
+    },
+    "rear": {
+      "box": 1,
+      "last_review": "2026-03-23",
+      "correct": 1,
+      "wrong": 2
+    },
+    "commuting": {
+      "box": 1,
+      "last_review": "2026-03-23",
+      "correct": 1,
+      "wrong": 5
+    },
+    "irrigation": {
+      "box": 1,
+      "last_review": "2026-03-23",
+      "correct": 1,
+      "wrong": 2
+    },
+    "indecisive": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 1
+    },
+    "competent": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 2
+    },
+    "teller": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 2
+    },
+    "fortune": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 0
+    },
+    "respective": {
+      "box": 1,
+      "last_review": "2026-03-23",
+      "correct": 0,
+      "wrong": 4
+    },
+    "undergo": {
+      "box": 1,
+      "last_review": "2026-03-23",
+      "correct": 0,
+      "wrong": 4
+    },
+    "faucet": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 1
+    },
+    "leaky": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 1
+    },
+    "roughly": {
+      "box": 2,
+      "last_review": "2026-03-20",
+      "correct": 1,
+      "wrong": 1
+    },
+    "incur": {
+      "box": 1,
+      "last_review": "2026-03-23",
+      "correct": 0,
+      "wrong": 2
+    },
+    "reimbursement": {
+      "box": 1,
+      "last_review": "2026-03-23",
+      "correct": 0,
+      "wrong": 2
+    },
+    "reinforce": {
+      "box": 2,
+      "last_review": "2026-03-23",
+      "correct": 1,
+      "wrong": 1
+    }
+  },
+  "stats": {
+    "total_sessions": 6,
+    "last_session": "2026-03-23",
+    "streak": 1
+  },
+  "history": [
+    {
+      "date": "2026-03-20",
+      "reviewed": 10,
+      "correct": 2
+    },
+    {
+      "date": "2026-03-20",
+      "reviewed": 10,
+      "correct": 4
+    },
+    {
+      "date": "2026-03-20",
+      "reviewed": 10,
+      "correct": 3
+    },
+    {
+      "date": "2026-03-20",
+      "reviewed": 10,
+      "correct": 3
+    },
+    {
+      "date": "2026-03-20",
+      "reviewed": 10,
+      "correct": 5
+    },
+    {
+      "date": "2026-03-23",
+      "reviewed": 10,
+      "correct": 1
+    }
+  ]
+}

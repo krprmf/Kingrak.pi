@@ -64,14 +64,24 @@ Python is my main language -- I use it for everything from data pipelines and ML
 
 ### Projects
 
+#### `work/` -- Real-world experience
 | Folder | Project | What It Does | Stack |
 |--------|---------|-------------|-------|
 | `DS_DE_TOOL/` | Data Engineering Toolkit | Multi-phase data processing pipeline with streaming & caching | Kafka, Redis, FastAPI, Python |
-| `Project_DS/` | Data Science Coursework | Academic research pipeline (Scopus API) + BERT multi-label classifier for paper categorization | PySpark, HuggingFace, W&B, NLTK |
-| `SocNet_Anal/` | Social Network Analysis | Network analysis & visualization of social data | Python, Gephi |
-| `SunDayIns_DSTest/` | Sunday Insurance DS Test | ML challenge -- classification & prediction tasks | Scikit-learn, Pandas |
-| `Thesis/` | Graduate Thesis | Generative AI exploration (Stable Diffusion) | Python, Deep Learning |
 | `inox_intern/` | Video Content Analyzer | LLM prompt-engineered VTT transcript analyzer with structured JSON output | Generative AI, Prompt Engineering |
+
+#### `academic/` -- University projects & research
+| Folder | Project | What It Does | Stack |
+|--------|---------|-------------|-------|
+| `Project_DS/` | Data Science Coursework | Research pipeline (Scopus API) + BERT multi-label classifier (18 categories) | PySpark, HuggingFace, W&B, NLTK |
+| `SocNet_Anal/` | Social Network Analysis | Network analysis & visualization of social data | Python, Gephi |
+| `Thesis/` | Graduate Thesis | Generative AI exploration (Stable Diffusion) | Python, Deep Learning |
+| `SunDayIns_DSTest/` | Sunday Insurance DS Test | ML challenge -- classification & prediction tasks | Scikit-learn, Pandas |
+
+#### `personal/` -- Side projects
+| Folder | Project | What It Does | Stack |
+|--------|---------|-------------|-------|
+| `vocab-practice-project/` | Vocab Practice Tool | CLI spaced repetition flashcards with Leitner algorithm for TOEIC prep | Pure Python |
 
 ---
 
