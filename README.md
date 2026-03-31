@@ -1,7 +1,7 @@
 <h1 align="center">Hi! I'm Kingrak 👋</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1000&color=6C63FF&center=true&vCenter=true&width=480&height=30&lines=Data+Scientist+%7C+ML+%26+Prompt+Engineer;Data+Scientist+who+ships+with+AI+%F0%9F%9A%80" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3000&pause=1000&color=6C63FF&center=true&vCenter=true&width=480&height=30&lines=ML+%26+Prompt+Engineer;Data+Scientist+who+ships+with+AI+%F0%9F%9A%80" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 I'm a **Data Scientist & AI-Augmented Developer** from Bangkok, Thailand.
 
-M.Sc. Computer Engineering @ Chulalongkorn University (GPA 4.00) | B.Eng. Electrical Engineering @ Chula
+M.Sc. Computer Engineering @ Chulalongkorn University | B.Eng. Electrical Engineering @ Chula
 
 Python is my main language -- I use it for everything from data pipelines and ML models to backend APIs. For the rest (frontend, web flows), I leverage **AI tools** to help me build and ship full-stack products. I believe the future belongs to people who can *think* like engineers and *ship* with AI.
 
