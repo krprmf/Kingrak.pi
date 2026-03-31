@@ -87,7 +87,7 @@ Python is my main language -- I use it for everything from data pipelines and ML
 - I make coffee almost as well as I write prompts (barista life)
 - Photography, guitar, and animation keep my creative side alive
 - Went on Work & Travel USA (summer 2025) -- best decision ever
-- My motto: **"Python is home, AI is the vehicle, data is the fuel"**
+- My motto: **"AI is my tool, brain is my engine."**
 
 ---
 
