@@ -1,0 +1,20 @@
+# PumLaewPai — Python dependencies
+# Run: pip install -r requirements.txt (inside .venv)
+
+# Streamlit web app framework
+streamlit>=1.57.0
+
+# Map rendering (Leaflet under the hood)
+folium>=0.20.0
+streamlit-folium>=0.27.0
+
+# Data handling
+pandas>=2.0.0
+openpyxl>=3.1.0          # read .xlsx files
+chardet>=4.0.0           # detect Thai encoding
+
+# Charts (optional, beyond Streamlit built-ins)
+plotly>=5.9.0
+
+# LLM — Gemini API for RAG chatbot
+google-genai>=0.5.0

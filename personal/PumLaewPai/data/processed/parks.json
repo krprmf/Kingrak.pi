@@ -1,0 +1,3018 @@
+[
+  {
+    "slug": "park-900",
+    "nameTh": "คลองลาน",
+    "nameEn": null,
+    "provinces": [
+      "กำแพงเพชร"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 300.0,
+    "areaRai": 187500.0,
+    "areaYear": 2567,
+    "latitude": 16.1862573,
+    "longitude": 99.208263,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=900",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-902",
+    "nameTh": "คลองวังเจ้า",
+    "nameEn": null,
+    "provinces": [
+      "กำแพงเพชร",
+      "ตาก"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 747.0,
+    "areaRai": 466875.0,
+    "areaYear": 2567,
+    "latitude": 16.33367,
+    "longitude": 99.1173961,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=902",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-894",
+    "nameTh": "แม่วงก์",
+    "nameEn": null,
+    "provinces": [
+      "กำแพงเพชร",
+      "นครสวรรค์"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 894.0,
+    "areaRai": 558750.0,
+    "areaYear": 2567,
+    "latitude": 15.8866645,
+    "longitude": 99.2056507,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=894",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-903",
+    "nameTh": "ขุนแจ",
+    "nameEn": null,
+    "provinces": [
+      "เชียงราย"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 270.0,
+    "areaRai": 168750.0,
+    "areaYear": 2567,
+    "latitude": 19.1286415,
+    "longitude": 99.3708418,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=903",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-904",
+    "nameTh": "ดอยหลวง",
+    "nameEn": null,
+    "provinces": [
+      "เชียงราย",
+      "พะเยา",
+      "ลำปาง"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 1169.48,
+    "areaRai": 730927.0,
+    "areaYear": 2567,
+    "latitude": 19.3777071,
+    "longitude": 99.6394015,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=904",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-11653",
+    "nameTh": "ถ้ำหลวง - ขุนน้ำนางนอน (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "เชียงราย"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 20.3814664,
+    "longitude": 99.8673301,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=11653",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-7348",
+    "nameTh": "ภูชี้ฟ้า (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "เชียงราย"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 19.8508422,
+    "longitude": 100.447751,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=7348",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-905",
+    "nameTh": "ลำน้ำกก (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "เชียงราย"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 19.7589517,
+    "longitude": 99.6734592,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=905",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-907",
+    "nameTh": "ขุนขาน",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 207.93,
+    "areaRai": 129959.0,
+    "areaYear": 2567,
+    "latitude": 18.9005751,
+    "longitude": 98.7532839,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=907",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-908",
+    "nameTh": "ดอยผ้าห่มปก",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 19.9200598,
+    "longitude": 99.0838188,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=908",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-912",
+    "nameTh": "ดอยเวียงผา (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 20.3814664,
+    "longitude": 99.8673301,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=912",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-914",
+    "nameTh": "ดอยสุเทพ - ปุย",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 257.3,
+    "areaRai": 160812.73,
+    "areaYear": 2567,
+    "latitude": 18.8551747,
+    "longitude": 98.8729694,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=914",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-915",
+    "nameTh": "ดอยอินทนนท์",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 481.89,
+    "areaRai": 301184.05,
+    "areaYear": 2567,
+    "latitude": 18.5326746,
+    "longitude": 98.5578032,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=915",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-7346",
+    "nameTh": "น้ำตกบัวตอง - น้ำพุเจ็ดสี (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 18.6951714,
+    "longitude": 98.4462684,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=7346",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-916",
+    "nameTh": "ผาแดง",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 19.6384414,
+    "longitude": 98.8025098,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=916",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-917",
+    "nameTh": "แม่ตะไคร้",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่",
+      "ลำพูน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 354.31,
+    "areaRai": 221446.0,
+    "areaYear": 2567,
+    "latitude": 18.706395,
+    "longitude": 99.2424251,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=917",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-918",
+    "nameTh": "แม่โถ (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 18.2518318,
+    "longitude": 98.2097054,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=918",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-920",
+    "nameTh": "แม่วาง",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 119.63,
+    "areaRai": 74766.0,
+    "areaYear": 2567,
+    "latitude": 18.5417246,
+    "longitude": 98.7346387,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=920",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-921",
+    "nameTh": "ศรีลานนา",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 1405.69,
+    "areaRai": 878557.9,
+    "areaYear": 2567,
+    "latitude": 19.2960265,
+    "longitude": 99.1020458,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=921",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-922",
+    "nameTh": "ห้วยน้ำดัง",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่",
+      "แม่ฮ่องสอน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 1252.12,
+    "areaRai": 782575.0,
+    "areaYear": 2567,
+    "latitude": 19.4676949,
+    "longitude": 98.4931338,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=922",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-923",
+    "nameTh": "ออบขาน (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 18.7229397,
+    "longitude": 98.821493,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=923",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-925",
+    "nameTh": "ออบหลวง",
+    "nameEn": null,
+    "provinces": [
+      "เชียงใหม่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 553.0,
+    "areaRai": 345625.0,
+    "areaYear": 2567,
+    "latitude": 18.2388526,
+    "longitude": 98.5137488,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=925",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-928",
+    "nameTh": "ขุนพะวอ",
+    "nameEn": null,
+    "provinces": [
+      "ตาก"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 396.73,
+    "areaRai": 247957.0,
+    "areaYear": 2567,
+    "latitude": 16.9139019,
+    "longitude": 98.7160395,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=928",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-2521",
+    "nameTh": "ดอยสอยมาลัย - ไม้กลายเป็นหิน (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "ตาก"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 17.1053568,
+    "longitude": 98.9953943,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=2521",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-929",
+    "nameTh": "ตากสินมหาราช",
+    "nameEn": null,
+    "provinces": [
+      "ตาก"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 149.0,
+    "areaRai": 93125.0,
+    "areaYear": 2567,
+    "latitude": 16.8309516,
+    "longitude": 98.8776197,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=929",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-931",
+    "nameTh": "น้ำตกพาเจริญ (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "ตาก"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 16.5024185,
+    "longitude": 98.7522355,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=931",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-932",
+    "nameTh": "แม่เมย",
+    "nameEn": null,
+    "provinces": [
+      "ตาก"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 185.28,
+    "areaRai": 115800.0,
+    "areaYear": 2567,
+    "latitude": 17.4672027,
+    "longitude": 98.1045086,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=932",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-933",
+    "nameTh": "ลานสาง",
+    "nameEn": null,
+    "provinces": [
+      "ตาก"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 104.0,
+    "areaRai": 65000.0,
+    "areaYear": 2567,
+    "latitude": 16.7576437,
+    "longitude": 99.0056833,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=933",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-934",
+    "nameTh": "ขุนน่าน",
+    "nameEn": null,
+    "provinces": [
+      "น่าน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 246.37,
+    "areaRai": 153982.0,
+    "areaYear": 2567,
+    "latitude": 19.1194865,
+    "longitude": 101.2101765,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=934",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-935",
+    "nameTh": "ขุนสถาน",
+    "nameEn": null,
+    "provinces": [
+      "น่าน",
+      "อุตรดิตถ์"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 342.49,
+    "areaRai": 214058.0,
+    "areaYear": 2567,
+    "latitude": 18.2152744,
+    "longitude": 100.5860485,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=935",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-937",
+    "nameTh": "ดอยภูคา",
+    "nameEn": null,
+    "provinces": [
+      "น่าน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 1704.0,
+    "areaRai": 1065000.0,
+    "areaYear": 2567,
+    "latitude": 19.1076224,
+    "longitude": 101.0536168,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=937",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-940",
+    "nameTh": "ถ้ำสะเกิน",
+    "nameEn": null,
+    "provinces": [
+      "น่าน",
+      "พะเยา"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 249.9,
+    "areaRai": 156187.0,
+    "areaYear": 2567,
+    "latitude": 19.4530065,
+    "longitude": 100.5435913,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=940",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-942",
+    "nameTh": "นันทบุรี (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "น่าน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 18.7544594,
+    "longitude": 100.624804,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=942",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-943",
+    "nameTh": "แม่จริม",
+    "nameEn": null,
+    "provinces": [
+      "น่าน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 432.0,
+    "areaRai": 270000.0,
+    "areaYear": 2567,
+    "latitude": 18.5831755,
+    "longitude": 101.0694412,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=943",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-944",
+    "nameTh": "ศรีน่าน",
+    "nameEn": null,
+    "provinces": [
+      "น่าน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 1024.38,
+    "areaRai": 640237.5,
+    "areaYear": 2567,
+    "latitude": 18.2662281,
+    "longitude": 100.8573429,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=944",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-947",
+    "nameTh": "ดอยภูนาง",
+    "nameEn": null,
+    "provinces": [
+      "พะเยา"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 859.88,
+    "areaRai": 537424.0,
+    "areaYear": 2567,
+    "latitude": 18.9881252,
+    "longitude": 100.3675205,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=947",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-949",
+    "nameTh": "ภูซาง",
+    "nameEn": null,
+    "provinces": [
+      "พะเยา",
+      "เชียงราย"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 284.88,
+    "areaRai": 178049.62,
+    "areaYear": 2567,
+    "latitude": 19.6000387,
+    "longitude": 100.4499809,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=949",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-952",
+    "nameTh": "แม่ปืม",
+    "nameEn": null,
+    "provinces": [
+      "พะเยา",
+      "เชียงราย"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 350.83,
+    "areaRai": 219266.0,
+    "areaYear": 2567,
+    "latitude": 19.434778,
+    "longitude": 99.9105749,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=952",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-792",
+    "nameTh": "แควน้อย (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "พิษณุโลก"
+    ],
+    "region": "กลาง",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 8.2388214,
+    "longitude": 98.5060532,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=792",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-737",
+    "nameTh": "ทุ่งแสลงหลวง",
+    "nameEn": null,
+    "provinces": [
+      "พิษณุโลก",
+      "เพชรบูรณ์"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 1262.4,
+    "areaRai": 789000.0,
+    "areaYear": 2567,
+    "latitude": 16.6629411,
+    "longitude": 100.8053552,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=737",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-791",
+    "nameTh": "น้ำตกชาติตระการ",
+    "nameEn": null,
+    "provinces": [
+      "พิษณุโลก"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 543.0,
+    "areaRai": 339375.0,
+    "areaYear": 2567,
+    "latitude": 17.2983945,
+    "longitude": 100.7435588,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=791",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-790",
+    "nameTh": "ภูหินร่องกล้า",
+    "nameEn": null,
+    "provinces": [
+      "พิษณุโลก",
+      "เลย"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 307.0,
+    "areaRai": 191875.0,
+    "areaYear": 2567,
+    "latitude": 17.0015346,
+    "longitude": 100.9874459,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=790",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-794",
+    "nameTh": "เขาค้อ",
+    "nameEn": null,
+    "provinces": [
+      "เพชรบูรณ์"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 482.72,
+    "areaRai": 301698.0,
+    "areaYear": 2567,
+    "latitude": 16.4942867,
+    "longitude": 100.9436667,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=794",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-959",
+    "nameTh": "ตาดหมอก",
+    "nameEn": null,
+    "provinces": [
+      "เพชรบูรณ์"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 290.0,
+    "areaRai": 181250.0,
+    "areaYear": 2567,
+    "latitude": 16.4724365,
+    "longitude": 101.3995256,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=959",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-960",
+    "nameTh": "น้ำหนาว",
+    "nameEn": null,
+    "provinces": [
+      "เพชรบูรณ์",
+      "ชัยภูมิ"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 966.0,
+    "areaRai": 603750.0,
+    "areaYear": 2567,
+    "latitude": 16.7304339,
+    "longitude": 101.5403327,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=960",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-964",
+    "nameTh": "ดอยผากลอง",
+    "nameEn": null,
+    "provinces": [
+      "แพร่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 188.77,
+    "areaRai": 117982.0,
+    "areaYear": 2567,
+    "latitude": 18.1416149,
+    "longitude": 100.0634313,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=964",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-965",
+    "nameTh": "แม่ยม",
+    "nameEn": null,
+    "provinces": [
+      "แพร่",
+      "ลำปาง"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 454.75,
+    "areaRai": 284218.75,
+    "areaYear": 2567,
+    "latitude": 18.7197108,
+    "longitude": 100.2392926,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=965",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-967",
+    "nameTh": "เวียงโกศัย",
+    "nameEn": null,
+    "provinces": [
+      "แพร่",
+      "ลำปาง"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 409.78,
+    "areaRai": 256115.6,
+    "areaYear": 2567,
+    "latitude": 17.8904721,
+    "longitude": 99.4689133,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=967",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-968",
+    "nameTh": "ถ้ำปลา - น้ำตกผาเสื่อ",
+    "nameEn": null,
+    "provinces": [
+      "แม่ฮ่องสอน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 630.59,
+    "areaRai": 394120.0,
+    "areaYear": 2567,
+    "latitude": 19.4632405,
+    "longitude": 97.9045716,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=968",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-969",
+    "nameTh": "น้ำตกแม่สุรินทร์",
+    "nameEn": null,
+    "provinces": [
+      "แม่ฮ่องสอน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 396.6,
+    "areaRai": 247875.0,
+    "areaYear": 2567,
+    "latitude": 19.1234353,
+    "longitude": 98.0418351,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=969",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-972",
+    "nameTh": "แม่เงา (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "แม่ฮ่องสอน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 17.8472221,
+    "longitude": 97.976023,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=972",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-7349",
+    "nameTh": "แม่สะเรียง (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "แม่ฮ่องสอน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 18.235945,
+    "longitude": 97.9445766,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=7349",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-973",
+    "nameTh": "สาละวิน",
+    "nameEn": null,
+    "provinces": [
+      "แม่ฮ่องสอน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 721.52,
+    "areaRai": 450950.0,
+    "areaYear": 2567,
+    "latitude": 18.1775114,
+    "longitude": 97.8387955,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=973",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-7347",
+    "nameTh": "เขลางค์บรรพต (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "ลำปาง"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 18.2553069,
+    "longitude": 99.5617446,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=7347",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-974",
+    "nameTh": "แจ้ซ้อน",
+    "nameEn": null,
+    "provinces": [
+      "ลำปาง"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 768.0,
+    "areaRai": 480000.0,
+    "areaYear": 2567,
+    "latitude": 18.8368869,
+    "longitude": 99.4363561,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=974",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-976",
+    "nameTh": "ดอยจง",
+    "nameEn": null,
+    "provinces": [
+      "ลำปาง",
+      "ลำพูน"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 336.32,
+    "areaRai": 210200.0,
+    "areaYear": 2567,
+    "latitude": 17.7829143,
+    "longitude": 99.0972406,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=976",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-977",
+    "nameTh": "ถ้ำผาไท (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "ลำปาง"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 18.6048234,
+    "longitude": 99.8988953,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=977",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-979",
+    "nameTh": "แม่วะ",
+    "nameEn": null,
+    "provinces": [
+      "ลำปาง",
+      "ตาก"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 582.68,
+    "areaRai": 364173.0,
+    "areaYear": 2567,
+    "latitude": 17.4266933,
+    "longitude": 99.2464976,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=979",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-981",
+    "nameTh": "ดอยขุนตาล",
+    "nameEn": null,
+    "provinces": [
+      "ลำพูน",
+      "ลำปาง"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 255.29,
+    "areaRai": 159556.25,
+    "areaYear": 2567,
+    "latitude": 18.4701941,
+    "longitude": 99.3408649,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=981",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-982",
+    "nameTh": "แม่ปิง",
+    "nameEn": null,
+    "provinces": [
+      "ลำพูน",
+      "เชียงใหม่",
+      "ตาก"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 1003.75,
+    "areaRai": 627346.0,
+    "areaYear": 2567,
+    "latitude": 17.5941776,
+    "longitude": 98.7270995,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=982",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-983",
+    "nameTh": "รามคำแหง",
+    "nameEn": null,
+    "provinces": [
+      "สุโขทัย"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 341.0,
+    "areaRai": 213125.0,
+    "areaYear": 2567,
+    "latitude": 16.8889473,
+    "longitude": 99.6527561,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=983",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-985",
+    "nameTh": "ศรีสัชนาลัย",
+    "nameEn": null,
+    "provinces": [
+      "สุโขทัย"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 213.2,
+    "areaRai": 133250.0,
+    "areaYear": 2567,
+    "latitude": 17.6082065,
+    "longitude": 99.4781583,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=985",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-987",
+    "nameTh": "ต้นสักใหญ่",
+    "nameEn": null,
+    "provinces": [
+      "อุตรดิตถ์"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 17.5615581,
+    "longitude": 100.5599595,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=987",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-991",
+    "nameTh": "ภูสอยดาว",
+    "nameEn": null,
+    "provinces": [
+      "อุตรดิตถ์",
+      "พิษณุโลก"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 340.21,
+    "areaRai": 212633.0,
+    "areaYear": 2567,
+    "latitude": 17.835815,
+    "longitude": 101.0023387,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=991",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-994",
+    "nameTh": "ลำน้ำน่าน",
+    "nameEn": null,
+    "provinces": [
+      "อุตรดิตถ์",
+      "แพร่"
+    ],
+    "region": "เหนือ",
+    "areaSqKm": 996.54,
+    "areaRai": 622839.33,
+    "areaYear": 2567,
+    "latitude": 17.9328264,
+    "longitude": 100.5097969,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=994",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-890",
+    "nameTh": "น้ำพอง",
+    "nameEn": null,
+    "provinces": [
+      "ขอนแก่น",
+      "ชัยภูมิ"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 197.0,
+    "areaRai": 123125.0,
+    "areaYear": 2567,
+    "latitude": 16.3386723,
+    "longitude": 102.4755724,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=890",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-895",
+    "nameTh": "ภูผาม่าน",
+    "nameEn": null,
+    "provinces": [
+      "ขอนแก่น",
+      "เลย"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 350.0,
+    "areaRai": 218750.0,
+    "areaYear": 2567,
+    "latitude": 16.7379105,
+    "longitude": 101.8426052,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=895",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-896",
+    "nameTh": "ภูเวียง",
+    "nameEn": null,
+    "provinces": [
+      "ขอนแก่น"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 325.0,
+    "areaRai": 203125.0,
+    "areaYear": 2567,
+    "latitude": 16.6843077,
+    "longitude": 102.2441161,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=896",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-897",
+    "nameTh": "ตาดโตน",
+    "nameEn": null,
+    "provinces": [
+      "ชัยภูมิ"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 217.18,
+    "areaRai": 135737.5,
+    "areaYear": 2567,
+    "latitude": 15.9815555,
+    "longitude": 102.007791,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=897",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-898",
+    "nameTh": "ไทรทอง",
+    "nameEn": null,
+    "provinces": [
+      "ชัยภูมิ"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 319.0,
+    "areaRai": 199375.0,
+    "areaYear": 2567,
+    "latitude": 15.8673851,
+    "longitude": 101.4522113,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=898",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-899",
+    "nameTh": "ป่าหินงาม",
+    "nameEn": null,
+    "provinces": [
+      "ชัยภูมิ"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 99.9,
+    "areaRai": 62437.5,
+    "areaYear": 2567,
+    "latitude": 15.6318016,
+    "longitude": 101.4799314,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=899",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-901",
+    "nameTh": "ภูแลนคา",
+    "nameEn": null,
+    "provinces": [
+      "ชัยภูมิ"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 200.5,
+    "areaRai": 125312.5,
+    "areaYear": 2567,
+    "latitude": 16.1108162,
+    "longitude": 101.9713042,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=901",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-906",
+    "nameTh": "ภูลังกา",
+    "nameEn": null,
+    "provinces": [
+      "นครพนม",
+      "บึงกาฬ"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 50.0,
+    "areaRai": 31250.0,
+    "areaYear": 2567,
+    "latitude": 17.9544297,
+    "longitude": 104.1268409,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=906",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-640",
+    "nameTh": "เขาใหญ่",
+    "nameEn": null,
+    "provinces": [
+      "นครราชสีมา",
+      "สระบุรี",
+      "นครนายก"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 2165.55,
+    "areaRai": 1353471.53,
+    "areaYear": 2567,
+    "latitude": 14.3259499,
+    "longitude": 101.5762598,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=640",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-911",
+    "nameTh": "ภูผาเทิบ",
+    "nameEn": null,
+    "provinces": [
+      "มุกดาหาร"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 16.4346451,
+    "longitude": 104.8048287,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=911",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-913",
+    "nameTh": "ภูสระดอกบัว",
+    "nameEn": null,
+    "provinces": [
+      "มุกดาหาร",
+      "อำนาจเจริญ",
+      "ยโสธร"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 231.0,
+    "areaRai": 144375.0,
+    "areaYear": 2567,
+    "latitude": 16.1522482,
+    "longitude": 104.7893844,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=913",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-945",
+    "nameTh": "ภูกระดึง",
+    "nameEn": null,
+    "provinces": [
+      "เลย"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 348.12,
+    "areaRai": 217576.25,
+    "areaYear": 2567,
+    "latitude": 16.888501,
+    "longitude": 101.7616723,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=945",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-946",
+    "nameTh": "ภูเรือ",
+    "nameEn": null,
+    "provinces": [
+      "เลย"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 120.84,
+    "areaRai": 75525.0,
+    "areaYear": 2567,
+    "latitude": 17.513658,
+    "longitude": 101.3448731,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=946",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-948",
+    "nameTh": "ภูสวนทราย",
+    "nameEn": null,
+    "provinces": [
+      "เลย"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 17.524242,
+    "longitude": 100.9785956,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=948",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-950",
+    "nameTh": "เขาพระวิหาร",
+    "nameEn": null,
+    "provinces": [
+      "ศรีสะเกษ",
+      "อุบลราชธานี"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 130.0,
+    "areaRai": 81250.0,
+    "areaYear": 2567,
+    "latitude": 14.4238347,
+    "longitude": 104.8966858,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=950",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-951",
+    "nameTh": "ภูผายล",
+    "nameEn": null,
+    "provinces": [
+      "สกลนคร",
+      "นครพนม",
+      "มุกดาหาร"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 828.56,
+    "areaRai": 517850.0,
+    "areaYear": 2567,
+    "latitude": 16.8924905,
+    "longitude": 104.3358717,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=951",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-953",
+    "nameTh": "ภูผาเหล็ก",
+    "nameEn": null,
+    "provinces": [
+      "สกลนคร",
+      "อุดรธานี",
+      "กาฬสินธุ์"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 404.38,
+    "areaRai": 252737.0,
+    "areaYear": 2567,
+    "latitude": 17.0842584,
+    "longitude": 103.6560848,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=953",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-954",
+    "nameTh": "ภูพาน",
+    "nameEn": null,
+    "provinces": [
+      "สกลนคร",
+      "กาฬสินธุ์"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 664.7,
+    "areaRai": 415439.0,
+    "areaYear": 2567,
+    "latitude": 16.9956916,
+    "longitude": 103.8375649,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=954",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-892",
+    "nameTh": "ภูเก้า - ภูพานคำ",
+    "nameEn": null,
+    "provinces": [
+      "หนองบัวลำภู",
+      "ขอนแก่น"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 318.36,
+    "areaRai": 198973.0,
+    "areaYear": 2567,
+    "latitude": 16.9475898,
+    "longitude": 102.4299996,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=892",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-955",
+    "nameTh": "นายูง - น้ำโสม (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "อุดรธานี"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 17.5211917,
+    "longitude": 102.6680012,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=955",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-2608",
+    "nameTh": "ภูหินจอมธาตุ - ภูพระบาท (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "อุดรธานี"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 17.5211917,
+    "longitude": 102.6680012,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=2608",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-956",
+    "nameTh": "แก่งตะนะ",
+    "nameEn": null,
+    "provinces": [
+      "อุบลราชธานี"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 80.0,
+    "areaRai": 50000.0,
+    "areaYear": 2567,
+    "latitude": 15.2790628,
+    "longitude": 105.5302789,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=956",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-957",
+    "nameTh": "ผาแต้ม",
+    "nameEn": null,
+    "provinces": [
+      "อุบลราชธานี"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": 340.0,
+    "areaRai": 212500.0,
+    "areaYear": 2567,
+    "latitude": 15.5752306,
+    "longitude": 105.5872958,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=957",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-958",
+    "nameTh": "ภูจองนายอย",
+    "nameEn": null,
+    "provinces": [
+      "อุบลราชธานี"
+    ],
+    "region": "อีสาน",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 14.417836,
+    "longitude": 105.3068532,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=958",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-891",
+    "nameTh": "น้ำตกเจ็ดสาวน้อย",
+    "nameEn": null,
+    "provinces": [
+      "สระบุรี",
+      "นครราชสีมา"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 41.98,
+    "areaRai": 26238.0,
+    "areaYear": 2567,
+    "latitude": 14.7548441,
+    "longitude": 101.1396986,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=891",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-893",
+    "nameTh": "น้ำตกสามหลั่น",
+    "nameEn": null,
+    "provinces": [
+      "สระบุรี"
+    ],
+    "region": "กลาง",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 14.4299007,
+    "longitude": 100.9589524,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=893",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-32645",
+    "nameTh": "เจ็ดคด - โป่งก้อนเส้า (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "สระบุรี"
+    ],
+    "region": "กลาง",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 14.6240563,
+    "longitude": 100.8601022,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=32645",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-919",
+    "nameTh": "พุเตย",
+    "nameEn": null,
+    "provinces": [
+      "สุพรรณบุรี"
+    ],
+    "region": "กลาง",
+    "areaSqKm": 317.48,
+    "areaRai": 198422.0,
+    "areaYear": 2567,
+    "latitude": 14.9257108,
+    "longitude": 99.3398645,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=919",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-961",
+    "nameTh": "เขาคิชฌกูฏ",
+    "nameEn": null,
+    "provinces": [
+      "จันทบุรี"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 58.31,
+    "areaRai": 36444.05,
+    "areaYear": 2567,
+    "latitude": 12.8424217,
+    "longitude": 102.160856,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=961",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-962",
+    "nameTh": "เขาสิบห้าชั้น",
+    "nameEn": null,
+    "provinces": [
+      "จันทบุรี"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 117.97,
+    "areaRai": 73729.0,
+    "areaYear": 2567,
+    "latitude": 13.1775263,
+    "longitude": 101.9709202,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=962",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-963",
+    "nameTh": "น้ำตกพลิ้ว",
+    "nameEn": null,
+    "provinces": [
+      "จันทบุรี"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 134.5,
+    "areaRai": 84062.5,
+    "areaYear": 2567,
+    "latitude": 12.5488247,
+    "longitude": 102.2003115,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=963",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-966",
+    "nameTh": "น้ำตกคลองแก้ว",
+    "nameEn": null,
+    "provinces": [
+      "ตราด"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 197.92,
+    "areaRai": 123700.0,
+    "areaYear": 2567,
+    "latitude": 12.583298,
+    "longitude": 102.6202738,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=966",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-971",
+    "nameTh": "หมู่เกาะช้าง",
+    "nameEn": null,
+    "provinces": [
+      "ตราด"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 650.0,
+    "areaRai": 406250.0,
+    "areaYear": 2567,
+    "latitude": 11.9677391,
+    "longitude": 102.4776276,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=971",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-986",
+    "nameTh": "ทับลาน",
+    "nameEn": null,
+    "provinces": [
+      "ปราจีนบุรี",
+      "นครราชสีมา"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 2235.8,
+    "areaRai": 1397375.0,
+    "areaYear": 2567,
+    "latitude": 14.3471964,
+    "longitude": 102.0154674,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=986",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-988",
+    "nameTh": "เขาชะเมา - เขาวง",
+    "nameEn": null,
+    "provinces": [
+      "ระยอง",
+      "จันทบุรี"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 83.68,
+    "areaRai": 52300.0,
+    "areaYear": 2567,
+    "latitude": 12.9376766,
+    "longitude": 101.745969,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=988",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-990",
+    "nameTh": "เขาแหลมหญ้า - หมู่เกาะเสม็ด",
+    "nameEn": null,
+    "provinces": [
+      "ระยอง"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 131.0,
+    "areaRai": 81875.0,
+    "areaYear": 2567,
+    "latitude": 12.560396,
+    "longitude": 101.4501152,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=990",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-910",
+    "nameTh": "ตาพระยา",
+    "nameEn": null,
+    "provinces": [
+      "สระแก้ว",
+      "บุรีรัมย์"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 594.0,
+    "areaRai": 371250.0,
+    "areaYear": 2567,
+    "latitude": 14.2013049,
+    "longitude": 102.8641211,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=910",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-993",
+    "nameTh": "ปางสีดา",
+    "nameEn": null,
+    "provinces": [
+      "สระแก้ว",
+      "ปราจีนบุรี"
+    ],
+    "region": "ตะวันออก",
+    "areaSqKm": 844.0,
+    "areaRai": 527500.0,
+    "areaYear": 2567,
+    "latitude": 14.0750074,
+    "longitude": 102.2978982,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=993",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1002",
+    "nameTh": "เขาแหลม",
+    "nameEn": null,
+    "provinces": [
+      "กาญจนบุรี"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 1496.93,
+    "areaRai": 935583.69,
+    "areaYear": 2567,
+    "latitude": 14.9126046,
+    "longitude": 98.4796503,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1002",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1004",
+    "nameTh": "เขื่อนศรีนครินทร์",
+    "nameEn": null,
+    "provinces": [
+      "กาญจนบุรี"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 1532.0,
+    "areaRai": 957500.0,
+    "areaYear": 2567,
+    "latitude": 14.7488206,
+    "longitude": 99.0346646,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1004",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1006",
+    "nameTh": "เฉลิมรัตนโกสินทร์",
+    "nameEn": null,
+    "provinces": [
+      "กาญจนบุรี"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 14.6750614,
+    "longitude": 99.2745639,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1006",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1008",
+    "nameTh": "ทองผาภูมิ",
+    "nameEn": null,
+    "provinces": [
+      "กาญจนบุรี"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 1235.54,
+    "areaRai": 772214.27,
+    "areaYear": 2567,
+    "latitude": 14.87804,
+    "longitude": 98.2801544,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1008",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1011",
+    "nameTh": "ไทรโยค",
+    "nameEn": null,
+    "provinces": [
+      "กาญจนบุรี"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 500.0,
+    "areaRai": 312500.0,
+    "areaYear": 2567,
+    "latitude": 14.37608,
+    "longitude": 98.728991,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1011",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1013",
+    "nameTh": "ลำคลองงู",
+    "nameEn": null,
+    "provinces": [
+      "กาญจนบุรี"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 672.6,
+    "areaRai": 420374.0,
+    "areaYear": 2567,
+    "latitude": 14.8462899,
+    "longitude": 98.8980993,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1013",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-643",
+    "nameTh": "เอราวัณ",
+    "nameEn": null,
+    "provinces": [
+      "กาญจนบุรี"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 549.98,
+    "areaRai": 343735.0,
+    "areaYear": 2567,
+    "latitude": 14.3486384,
+    "longitude": 99.0697259,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=643",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1015",
+    "nameTh": "กุยบุรี",
+    "nameEn": null,
+    "provinces": [
+      "ประจวบคีรีขันธ์"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 969.0,
+    "areaRai": 605625.0,
+    "areaYear": 2567,
+    "latitude": 12.0940005,
+    "longitude": 99.5985356,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1015",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1016",
+    "nameTh": "เขาสามร้อยยอด",
+    "nameEn": null,
+    "provinces": [
+      "ประจวบคีรีขันธ์"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 98.08,
+    "areaRai": 61300.0,
+    "areaYear": 2567,
+    "latitude": 12.2012363,
+    "longitude": 99.9417851,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1016",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1018",
+    "nameTh": "น้ำตกห้วยยาง",
+    "nameEn": null,
+    "provinces": [
+      "ประจวบคีรีขันธ์"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 161.0,
+    "areaRai": 100625.0,
+    "areaYear": 2567,
+    "latitude": 11.5600899,
+    "longitude": 99.4695576,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1018",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1020",
+    "nameTh": "หาดวนกร",
+    "nameEn": null,
+    "provinces": [
+      "ประจวบคีรีขันธ์"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 38.0,
+    "areaRai": 23750.0,
+    "areaYear": 2567,
+    "latitude": 11.6507629,
+    "longitude": 99.7112199,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1020",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-2603",
+    "nameTh": "อ่าวสยาม (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "ประจวบคีรีขันธ์"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 11.2107518,
+    "longitude": 99.5249393,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=2603",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-642",
+    "nameTh": "แก่งกระจาน",
+    "nameEn": null,
+    "provinces": [
+      "เพชรบุรี",
+      "ประจวบคีรีขันธ์"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 2914.7,
+    "areaRai": 1821687.84,
+    "areaYear": 2567,
+    "latitude": 12.8499985,
+    "longitude": 99.3659962,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=642",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1021",
+    "nameTh": "เฉลิมพระเกียรติไทยประจัน",
+    "nameEn": null,
+    "provinces": [
+      "ราชบุรี"
+    ],
+    "region": "ตะวันตก",
+    "areaSqKm": 328.74,
+    "areaRai": 205463.9,
+    "areaYear": 2567,
+    "latitude": 13.2237574,
+    "longitude": 99.5955389,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1021",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-924",
+    "nameTh": "เขาพนมเบญจา",
+    "nameEn": null,
+    "provinces": [
+      "กระบี่"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 50.12,
+    "areaRai": 31325.0,
+    "areaYear": 2567,
+    "latitude": 8.272442,
+    "longitude": 98.9246484,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=924",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-926",
+    "nameTh": "ธารโบกขรณี",
+    "nameEn": null,
+    "provinces": [
+      "กระบี่"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 104.0,
+    "areaRai": 65000.0,
+    "areaYear": 2567,
+    "latitude": 8.1119615,
+    "longitude": 98.6769011,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=926",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-927",
+    "nameTh": "หมู่เกาะลันตา",
+    "nameEn": null,
+    "provinces": [
+      "กระบี่"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 134.0,
+    "areaRai": 83750.0,
+    "areaYear": 2567,
+    "latitude": 7.2128231,
+    "longitude": 99.0693199,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=927",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-930",
+    "nameTh": "หาดนพรัตน์ธารา - หมู่เกาะพีพี",
+    "nameEn": null,
+    "provinces": [
+      "กระบี่"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 387.9,
+    "areaRai": 242437.17,
+    "areaYear": 2567,
+    "latitude": 8.0247203,
+    "longitude": 98.8144006,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=930",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-677",
+    "nameTh": "หมู่เกาะชุมพร",
+    "nameEn": null,
+    "provinces": [
+      "ชุมพร"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 317.0,
+    "areaRai": 198125.0,
+    "areaYear": 2567,
+    "latitude": 10.4463405,
+    "longitude": 99.2940241,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=677",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-678",
+    "nameTh": "หาดเจ้าไหม",
+    "nameEn": null,
+    "provinces": [
+      "ตรัง"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 230.87,
+    "areaRai": 144292.35,
+    "areaYear": 2567,
+    "latitude": 7.4119273,
+    "longitude": 99.3346867,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=678",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-936",
+    "nameTh": "เขานัน",
+    "nameEn": null,
+    "provinces": [
+      "นครศรีธรรมราช"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 409.79,
+    "areaRai": 256121.0,
+    "areaYear": 2567,
+    "latitude": 8.832322,
+    "longitude": 99.7167382,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=936",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-938",
+    "nameTh": "เขาหลวง",
+    "nameEn": null,
+    "provinces": [
+      "นครศรีธรรมราช"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 570.0,
+    "areaRai": 356250.0,
+    "areaYear": 2567,
+    "latitude": 8.5548806,
+    "longitude": 99.714132,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=938",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-939",
+    "nameTh": "น้ำตกโยง",
+    "nameEn": null,
+    "provinces": [
+      "นครศรีธรรมราช"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 205.0,
+    "areaRai": 128125.0,
+    "areaYear": 2567,
+    "latitude": 8.252031,
+    "longitude": 99.7497547,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=939",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-941",
+    "nameTh": "น้ำตกสี่ขีด",
+    "nameEn": null,
+    "provinces": [
+      "นครศรีธรรมราช",
+      "สุราษฎร์ธานี"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 145.0,
+    "areaRai": 90625.0,
+    "areaYear": 2567,
+    "latitude": 8.9838513,
+    "longitude": 99.684711,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=941",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-970",
+    "nameTh": "หาดขนอม - หมู่เกาะทะเลใต้ (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "นครศรีธรรมราช"
+    ],
+    "region": "ใต้",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 9.1079082,
+    "longitude": 99.9021459,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=970",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-975",
+    "nameTh": "น้ำตกซีโป (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "นราธิวาส"
+    ],
+    "region": "ใต้",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 6.3210758,
+    "longitude": 101.5972971,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=975",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-978",
+    "nameTh": "บูโด - สุไหงปาดี",
+    "nameEn": null,
+    "provinces": [
+      "นราธิวาส",
+      "ปัตตานี",
+      "ยะลา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 341.0,
+    "areaRai": 213125.0,
+    "areaYear": 2567,
+    "latitude": 6.4750165,
+    "longitude": 101.6111066,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=978",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-980",
+    "nameTh": "อ่าวมะนาว - เขาตันหยง (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "นราธิวาส"
+    ],
+    "region": "ใต้",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 6.4269,
+    "longitude": 101.8572775,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=980",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-984",
+    "nameTh": "น้ำตกทรายขาว",
+    "nameEn": null,
+    "provinces": [
+      "ปัตตานี",
+      "ยะลา",
+      "สงขลา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 69.57,
+    "areaRai": 43482.0,
+    "areaYear": 2567,
+    "latitude": 6.5985341,
+    "longitude": 101.0864033,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=984",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-989",
+    "nameTh": "เขาลำปี - หาดท้ายเหมือง",
+    "nameEn": null,
+    "provinces": [
+      "พังงา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 71.92,
+    "areaRai": 44950.0,
+    "areaYear": 2567,
+    "latitude": 8.4616165,
+    "longitude": 98.3045169,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=989",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-992",
+    "nameTh": "เขาหลัก - ลำรู่",
+    "nameEn": null,
+    "provinces": [
+      "พังงา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 125.0,
+    "areaRai": 78125.0,
+    "areaYear": 2567,
+    "latitude": 8.6255375,
+    "longitude": 98.4690966,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=992",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-995",
+    "nameTh": "ศรีพังงา",
+    "nameEn": null,
+    "provinces": [
+      "พังงา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 246.08,
+    "areaRai": 153800.0,
+    "areaYear": 2567,
+    "latitude": 9.1162924,
+    "longitude": 98.47882,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=995",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-865",
+    "nameTh": "หมู่เกาะสิมิลัน",
+    "nameEn": null,
+    "provinces": [
+      "พังงา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 140.0,
+    "areaRai": 87500.0,
+    "areaYear": 2567,
+    "latitude": 8.5771331,
+    "longitude": 97.6463514,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=865",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-996",
+    "nameTh": "หมู่เกาะสุรินทร์",
+    "nameEn": null,
+    "provinces": [
+      "พังงา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 141.25,
+    "areaRai": 88282.0,
+    "areaYear": 2567,
+    "latitude": 9.4001641,
+    "longitude": 97.8657727,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=996",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-997",
+    "nameTh": "อ่าวพังงา",
+    "nameEn": null,
+    "provinces": [
+      "พังงา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 400.0,
+    "areaRai": 250000.0,
+    "areaYear": 2567,
+    "latitude": 8.2388214,
+    "longitude": 98.5060532,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=997",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-998",
+    "nameTh": "เขาปู่ - เขาย่า",
+    "nameEn": null,
+    "provinces": [
+      "พัทลุง",
+      "ตรัง",
+      "นครศรีธรรมราช"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 694.0,
+    "areaRai": 433750.0,
+    "areaYear": 2567,
+    "latitude": 7.7704832,
+    "longitude": 99.773047,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=998",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-889",
+    "nameTh": "สิรินาถ",
+    "nameEn": null,
+    "provinces": [
+      "ภูเก็ต"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 90.0,
+    "areaRai": 56250.0,
+    "areaYear": 2567,
+    "latitude": 8.1148786,
+    "longitude": 98.2782752,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=889",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-999",
+    "nameTh": "บางลาง",
+    "nameEn": null,
+    "provinces": [
+      "ยะลา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 261.0,
+    "areaRai": 163125.0,
+    "areaYear": 2567,
+    "latitude": 5.9814555,
+    "longitude": 101.362625,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=999",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1000",
+    "nameTh": "น้ำตกหงาว",
+    "nameEn": null,
+    "provinces": [
+      "ระนอง",
+      "ชุมพร"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 668.0,
+    "areaRai": 417500.0,
+    "areaYear": 2567,
+    "latitude": 9.9810758,
+    "longitude": 98.808628,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1000",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1001",
+    "nameTh": "ลำน้ำกระบุรี",
+    "nameEn": null,
+    "provinces": [
+      "ระนอง"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 160.0,
+    "areaRai": 100000.0,
+    "areaYear": 2567,
+    "latitude": 10.1689445,
+    "longitude": 98.6779069,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1001",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1003",
+    "nameTh": "หมู่เกาะระนอง",
+    "nameEn": null,
+    "provinces": [
+      "ระนอง"
+    ],
+    "region": "ใต้",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 10.0469546,
+    "longitude": 98.6870133,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1003",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1005",
+    "nameTh": "แหลมสน",
+    "nameEn": null,
+    "provinces": [
+      "ระนอง",
+      "พังงา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 315.0,
+    "areaRai": 196875.0,
+    "areaYear": 2567,
+    "latitude": 9.479572,
+    "longitude": 98.3792024,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1005",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1007",
+    "nameTh": "เขาน้ำค้าง",
+    "nameEn": null,
+    "provinces": [
+      "สงขลา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 212.0,
+    "areaRai": 132500.0,
+    "areaYear": 2567,
+    "latitude": 6.5638312,
+    "longitude": 100.597689,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1007",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1009",
+    "nameTh": "สันกาลาคีรี (เตรียมการ)",
+    "nameEn": null,
+    "provinces": [
+      "สงขลา"
+    ],
+    "region": "ใต้",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 6.356008,
+    "longitude": 100.9203002,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1009",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1010",
+    "nameTh": "ตะรุเตา",
+    "nameEn": null,
+    "provinces": [
+      "สตูล"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 1490.0,
+    "areaRai": 931250.0,
+    "areaYear": 2567,
+    "latitude": 6.6416041,
+    "longitude": 99.5319179,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1010",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1012",
+    "nameTh": "ทะเลบัน",
+    "nameEn": null,
+    "provinces": [
+      "สตูล"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 196.0,
+    "areaRai": 122500.0,
+    "areaYear": 2567,
+    "latitude": 6.6182945,
+    "longitude": 100.1517215,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1012",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1014",
+    "nameTh": "หมู่เกาะเภตรา",
+    "nameEn": null,
+    "provinces": [
+      "สตูล",
+      "ตรัง"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 494.38,
+    "areaRai": 308987.0,
+    "areaYear": 2567,
+    "latitude": 7.0572565,
+    "longitude": 99.443566,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1014",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1017",
+    "nameTh": "แก่งกรุง",
+    "nameEn": null,
+    "provinces": [
+      "สุราษฎร์ธานี"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 541.0,
+    "areaRai": 338125.0,
+    "areaYear": 2567,
+    "latitude": 9.506228,
+    "longitude": 98.8220349,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1017",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1019",
+    "nameTh": "เขาสก",
+    "nameEn": null,
+    "provinces": [
+      "สุราษฎร์ธานี"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 738.74,
+    "areaRai": 461712.5,
+    "areaYear": 2567,
+    "latitude": 9.0686898,
+    "longitude": 98.5738024,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1019",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1022",
+    "nameTh": "คลองพนม",
+    "nameEn": null,
+    "provinces": [
+      "สุราษฎร์ธานี"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 410.4,
+    "areaRai": 256500.0,
+    "areaYear": 2567,
+    "latitude": 8.7645847,
+    "longitude": 98.6454135,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1022",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1023",
+    "nameTh": "ใต้ร่มเย็น",
+    "nameEn": null,
+    "provinces": [
+      "สุราษฎร์ธานี"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 425.0,
+    "areaRai": 265625.0,
+    "areaYear": 2567,
+    "latitude": 8.7845665,
+    "longitude": 99.4932111,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1023",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1024",
+    "nameTh": "ธารเสด็จ - เกาะพะงัน",
+    "nameEn": null,
+    "provinces": [
+      "สุราษฎร์ธานี"
+    ],
+    "region": "ใต้",
+    "areaSqKm": null,
+    "areaRai": null,
+    "areaYear": null,
+    "latitude": 9.7416568,
+    "longitude": 100.0442572,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1024",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  },
+  {
+    "slug": "park-1025",
+    "nameTh": "หมู่เกาะอ่างทอง",
+    "nameEn": null,
+    "provinces": [
+      "สุราษฎร์ธานี"
+    ],
+    "region": "ใต้",
+    "areaSqKm": 102.0,
+    "areaRai": 63750.0,
+    "areaYear": 2567,
+    "latitude": 9.5375403,
+    "longitude": 99.6934068,
+    "dnpUrl": "https://portal.dnp.go.th/Content/nationalpark?contentId=1025",
+    "source": {
+      "dataset": "catalog.dnp.go.th: nationalparksname + areaofnp",
+      "fetchedAt": "2026-05-13"
+    }
+  }
+]
