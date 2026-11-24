@@ -46,7 +46,8 @@ Write a natural language prompt that includes:
   Example for Joy Dog "Sunny": "a cheerful yellow golden retriever puppy with floppy ears, round sparkling brown eyes, and a small red collar"
 - A pose and expression matching the emotion intensity (use arousal for energy level)
 - A background matching the diary context for THIS segment
-- End with: "chibi kawaii anime style, soft pastel colors, clean digital illustration, soft lighting, high quality, detailed"
+- Keep it wholesome: avoid the words "anime", "bed", "bath", "naked" or anything suggestive (the image service rejects them); e.g. say "resting on a soft cushion" instead of "lying in bed"
+- End with: "chibi kawaii style, soft pastel colors, clean digital illustration, soft lighting, high quality, detailed"
 
 IMPORTANT: Always include the SAME fixed physical description for each character to maintain consistency.
 
