@@ -41,7 +41,7 @@ export default async function MoodAlbumPage({ params }: { params: Promise<{ mood
       subtitle={`"${emotion.quote}"`}
       right={
         <Link
-          href="/collection"
+          href="/collection/feelings"
           className={`${panel} flex h-11 items-center gap-1.5 px-3 text-sm font-semibold text-cozy-cocoa transition-transform hover:scale-105 active:translate-y-0.5`}
         >
           <Library className="h-4.5 w-4.5 text-cozy-clay" />

@@ -19,7 +19,7 @@ const ROOM_IMAGE = "/images/room-float-v2.webp";
 const HOTSPOTS: { href: string | null; label: string; hint: string; icon: LucideIcon; box: Box; tag?: "above" | "inside" }[] = [
   { href: "/diary", label: "Desk", hint: "Sit down and write about your day.", icon: PenLine, box: { left: 10, top: 53, width: 17, height: 17 } },
   { href: "/calendar", label: "Mirror", hint: "Look back at how you have been feeling.", icon: Sparkles, box: { left: 27, top: 44, width: 9, height: 16 } },
-  { href: "/collection", label: "Bookshelf", hint: "Open your picture book of past days.", icon: BookOpen, box: { left: 53, top: 36, width: 13, height: 21 } },
+  { href: "/collection", label: "Bookshelf", hint: "Open your journal and flip back through your days.", icon: BookOpen, box: { left: 53, top: 36, width: 13, height: 21 } },
   { href: null, label: "Door", hint: "The outside world is not ready yet. Soon!", icon: DoorOpen, box: { left: 67, top: 40, width: 10, height: 28 }, tag: "inside" },
 ];
 

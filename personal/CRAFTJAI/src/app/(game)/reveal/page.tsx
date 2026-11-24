@@ -322,7 +322,7 @@ function RevealContent() {
                 className="flex flex-wrap justify-center gap-3 pt-1"
               >
                 <Link href="/collection" className={`${btnSecondary} h-12 px-5`}>
-                  See it in my book
+                  See it in my journal
                 </Link>
                 <Link href="/home" className={`${btnPrimary} h-12 px-5`}>
                   Back to my room
