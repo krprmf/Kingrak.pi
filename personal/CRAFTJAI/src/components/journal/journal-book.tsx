@@ -2,11 +2,11 @@
 
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, PenLine } from "lucide-react";
 import { EMOTION_MAP, type EmotionKey } from "@/lib/constants/emotions";
 import { btnPrimary, panel } from "@/components/game/ui";
+import { DateTicket, Doodle, GhostNote, MoodStamp, PaperSheet, TapedPhoto, TornNote, WashiTape } from "./scrapbook";
 
 export type JournalEntry = {
   id: string;
@@ -76,15 +76,15 @@ export function JournalBook({ entries }: { entries: JournalEntry[] }) {
   if (days.length === 0) {
     return (
       <div className="m-auto w-full max-w-sm">
-        <Paper>
-          <div className="flex h-full flex-col items-center justify-center gap-4 p-8 text-center">
+        <PaperSheet className="rounded-[18px] shadow-[0_10px_30px_rgba(74,52,38,0.25)]">
+          <div className="flex flex-col items-center justify-center gap-4 p-8 text-center">
             <p className="text-lg font-bold text-cozy-cocoa">Your journal is still empty</p>
             <p className="text-sm text-cozy-mocha">Write your first page at the desk and it will appear here.</p>
             <Link href="/diary" className={`${btnPrimary} h-12 px-5`}>
               <PenLine className="h-5 w-5" /> Go to the desk
             </Link>
           </div>
-        </Paper>
+        </PaperSheet>
       </div>
     );
   }
@@ -92,12 +92,11 @@ export function JournalBook({ entries }: { entries: JournalEntry[] }) {
   const day = days[current];
 
   return (
-    <div className="m-auto flex h-full w-full max-w-md flex-col gap-3">
-      {/* The book: page edges behind, the current page on top, turning around its left edge */}
-      <div className="relative min-h-0 flex-1 [perspective:1600px]">
-        {/* stacked paper edges, so it reads as a book with more pages */}
-        <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-[22px] border-2 border-cozy-paper bg-cozy-cream/70" />
-        <div className="absolute inset-0 translate-x-1 translate-y-1 rounded-[22px] border-2 border-cozy-paper bg-cozy-cream/85" />
+    <div className="m-auto flex h-full w-full max-w-md flex-col gap-3 lg:max-w-5xl">
+      {/* The book: a cloth cover peeking out, page edges, and the current day on top */}
+      <div className="relative min-h-0 flex-1 [perspective:2000px]">
+        <div className="absolute -inset-1.5 rounded-[22px] bg-cozy-clay-dark shadow-[0_14px_34px_rgba(74,52,38,0.35)]" />
+        <div className="absolute inset-0 translate-x-1 translate-y-1 rounded-[16px] bg-[#eadcc4]" />
 
         <AnimatePresence initial={false} custom={dir}>
           <motion.div
@@ -107,9 +106,9 @@ export function JournalBook({ entries }: { entries: JournalEntry[] }) {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.55, ease: [0.4, 0.1, 0.2, 1] }}
-            style={{ transformOrigin: "left center" }}
-            className="absolute inset-0"
+            transition={{ duration: 0.6, ease: [0.4, 0.1, 0.2, 1] }}
+            // phone: one page turning on its left edge; desktop: a spread turning on the spine
+            className="absolute inset-0 origin-left overflow-hidden rounded-[16px] [backface-visibility:hidden] lg:origin-center"
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.2}
@@ -118,9 +117,7 @@ export function JournalBook({ entries }: { entries: JournalEntry[] }) {
               else if (info.offset.x > 60) go(-1);
             }}
           >
-            <Paper>
-              <DayPage day={day} />
-            </Paper>
+            <DaySpread day={day} />
           </motion.div>
         </AnimatePresence>
       </div>
@@ -159,97 +156,72 @@ const flip = {
   exit: (dir: number) => ({ rotateY: dir > 0 ? -100 : 0, opacity: dir > 0 ? 0.6 : 0, zIndex: dir > 0 ? 3 : 0 }),
 };
 
-function Paper({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="relative h-full overflow-hidden rounded-[22px] border-2 border-cozy-paper bg-[#fffaf2] shadow-[0_8px_0_rgba(74,52,38,0.14),0_18px_36px_rgba(74,52,38,0.16)] [backface-visibility:hidden]">
-      {/* binding shadow on the left edge */}
-      <span className="pointer-events-none absolute inset-y-0 left-0 w-5 bg-gradient-to-r from-[#4a3426]/10 to-transparent" />
-      {children}
-    </div>
-  );
-}
-
-function DayPage({ day }: { day: Day }) {
+/**
+ * One day as a scrapbook spread.
+ * Desktop: left page = date ticket, mood stamps and the day's pictures; right page = what you wrote.
+ * Phone: the same two sheets stacked into one scrolling page.
+ */
+function DaySpread({ day }: { day: Day }) {
+  const seed = day.key;
   const weekday = day.date.toLocaleDateString("en-US", { weekday: "long" });
   const date = day.date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-  const several = day.entries.length > 1;
+  const moods = [...new Set(day.entries.map((e) => e.mood).filter((m): m is EmotionKey => !!m))];
+  const accent = moods[0] ? EMOTION_MAP[moods[0]].hex : "#b8694b";
+  const photos = day.entries.flatMap((e) => e.characters);
+  const photoSize = photos.length === 1 ? "w-[72%]" : photos.length === 2 ? "w-[47%]" : "w-[40%]";
 
   return (
-    <div className="flex h-full flex-col gap-3 overflow-y-auto px-6 pb-5 pt-5">
-      {/* Day header */}
-      <div className="flex items-baseline justify-between gap-2 border-b-2 border-cozy-paper pb-2">
-        <div>
-          <p className="text-lg font-bold leading-tight text-cozy-cocoa">{weekday}</p>
-          <p className="text-xs text-cozy-mocha">{date}</p>
-        </div>
-        {/* one dot per mood that visited this day */}
-        <div className="flex gap-1" aria-label="Moods this day">
-          {day.entries.map(
-            (e) => e.mood && <span key={e.id} className="h-3 w-3 rounded-full ring-2 ring-white" style={{ backgroundColor: EMOTION_MAP[e.mood].hex }} />
+    <div className="h-full overflow-y-auto lg:grid lg:grid-cols-2 lg:overflow-hidden">
+      {/* Left page: date, moods, pictures */}
+      <PaperSheet side="left" className="lg:h-full">
+        <div className="relative space-y-6 px-6 pb-8 pt-6 lg:h-full lg:overflow-y-auto">
+          <Doodle kind="sprig" color={accent} className="right-3 top-24 h-24 w-16" />
+          <Doodle kind="star" color="#b98838" className="bottom-6 left-4 h-10 w-8" />
+
+          <div className="flex items-start justify-between gap-3">
+            <DateTicket weekday={weekday} date={date} seed={seed} />
+            <div className="flex -space-x-3 pt-1">
+              {moods.map((m, i) => (
+                <MoodStamp key={m} mood={m} color={EMOTION_MAP[m].hex} seed={seed} i={i} />
+              ))}
+            </div>
+          </div>
+
+          {photos.length > 0 ? (
+            <div className="flex flex-wrap items-start justify-center gap-x-3 gap-y-8 pb-4 pt-2">
+              {photos.map((c, i) => (
+                <TapedPhoto key={c.id} href={`/character/${c.id}`} src={c.imageUrl} name={c.name} seed={seed} i={i} size={photoSize} />
+              ))}
+            </div>
+          ) : (
+            <p className="py-10 text-center text-sm text-cozy-mocha [font-family:var(--font-itim)]">no pictures this time, just words</p>
           )}
         </div>
-      </div>
+      </PaperSheet>
 
-      {day.entries.map((entry, i) => (
-        <EntryBlock key={entry.id} entry={entry} showDivider={several && i > 0} />
-      ))}
+      {/* Right page: what you wrote, and what the ghost said */}
+      <PaperSheet side="right" className="lg:h-full">
+        <div className="relative space-y-7 px-6 pb-10 pt-6 lg:h-full lg:overflow-y-auto">
+          <Doodle kind="heart" color={accent} className="right-4 top-4 h-10 w-8" />
+          <div className="relative ml-3 inline-block bg-[#d9bf98] px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-cozy-cocoa shadow-sm">
+            <WashiTape seed={seed} i={9} className="-left-4 -top-3 w-9" />
+            what happened
+          </div>
+
+          {day.entries.map((entry, i) => {
+            const time = new Date(entry.createdAt).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+            const reply = entry.reply && !THAI_SENTENCE.test(entry.reply) ? entry.reply : null;
+            return (
+              <section key={entry.id} className="space-y-4">
+                <TornNote time={time} seed={entry.id} i={i}>
+                  {entry.content}
+                </TornNote>
+                {reply && <GhostNote text={reply} seed={entry.id} i={i} />}
+              </section>
+            );
+          })}
+        </div>
+      </PaperSheet>
     </div>
-  );
-}
-
-function EntryBlock({ entry, showDivider }: { entry: JournalEntry; showDivider: boolean }) {
-  const time = new Date(entry.createdAt).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
-  const mood = entry.mood ? EMOTION_MAP[entry.mood] : null;
-  const reply = entry.reply && !THAI_SENTENCE.test(entry.reply) ? entry.reply : null;
-
-  return (
-    <section className={`space-y-3 ${showDivider ? "border-t-2 border-dashed border-cozy-paper pt-4" : ""}`}>
-      {/* Time + mood of this entry */}
-      <div className="flex items-center justify-between">
-        <span className="text-xs font-semibold text-cozy-mocha">{time}</span>
-        {mood && (
-          <span className="rounded-full px-2.5 py-0.5 text-xs font-semibold capitalize text-white" style={{ backgroundColor: mood.hex }}>
-            {entry.mood}
-          </span>
-        )}
-      </div>
-
-      {/* Pictures taped onto the page */}
-      {entry.characters.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-3 py-1">
-          {entry.characters.map((c, i) => (
-            <Link
-              key={c.id}
-              href={`/character/${c.id}`}
-              className={`relative block bg-white p-1.5 pb-5 shadow-[0_4px_10px_rgba(74,52,38,0.2)] transition-transform hover:scale-105 ${
-                entry.characters.length > 1 ? "w-[42%]" : "w-[62%]"
-              } ${i % 2 ? "rotate-2" : "-rotate-2"}`}
-            >
-              {/* washi tape */}
-              <span className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-3 bg-cozy-honey/60" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={c.imageUrl} alt={c.name} className="aspect-square w-full object-cover" />
-              <span className="absolute inset-x-0 bottom-0.5 text-center text-[11px] font-semibold text-cozy-mocha">{c.name}</span>
-            </Link>
-          ))}
-        </div>
-      )}
-
-      {/* What you wrote, in a handwriting-like font on lined paper */}
-      <p className="whitespace-pre-line text-[15px] text-cozy-cocoa [background-image:repeating-linear-gradient(to_bottom,transparent_0,transparent_calc(1.75rem-1px),#efdcc4_calc(1.75rem-1px),#efdcc4_1.75rem)] [font-family:var(--font-itim)] [line-height:1.75rem]">
-        {entry.content}
-      </p>
-
-      {/* The ghost's little note */}
-      {reply && (
-        <div className="flex items-start gap-2 rounded-xl bg-cozy-honey/20 p-3 text-sm text-cozy-cocoa">
-          <Image src="/images/jaid-ghost.webp" alt="" width={368} height={512} className="h-8 w-auto shrink-0" />
-          <p>
-            <span className="font-semibold text-cozy-mocha">โกส: </span>
-            {reply}
-          </p>
-        </div>
-      )}
-    </section>
   );
 }
