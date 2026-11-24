@@ -41,6 +41,6 @@ export async function analyzeMood(diaryContent: string): Promise<MoodAnalysis> {
 
   return {
     moods,
-    mascot_response: (parsed.mascot_response as string) ?? "ขอบคุณที่เล่าให้ใจดีฟังนะ 💙",
+    mascot_response: (parsed.mascot_response as string) ?? "Thanks for telling โกส about your day.",
   };
 }

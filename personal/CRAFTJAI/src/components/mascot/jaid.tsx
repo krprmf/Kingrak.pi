@@ -12,7 +12,7 @@ interface JaiDProps {
 export function JaiD({ lastResponse, lastMood }: JaiDProps) {
   const [showBubble, setShowBubble] = useState(false);
 
-  const defaultMessage = "เขียนไดอารี่วันนี้ยัง? มาเล่าให้ใจดีฟังสิ~";
+  const defaultMessage = "Did you write today? Tell โกส about it.";
 
   const moodColor = lastMood ? EMOTION_MAP[lastMood].hex : "#b0b0b0";
   const moodColorLight = lastMood ? `${EMOTION_MAP[lastMood].hex}25` : "#e5e7eb";
@@ -29,7 +29,7 @@ export function JaiD({ lastResponse, lastMood }: JaiDProps) {
             style={{ borderColor: moodColorLight }}
           >
             <p className="text-xs font-medium mb-1.5" style={{ color: moodColor }}>
-              JaiD (ใจดี)
+              โกส
             </p>
             <p className="text-sm leading-relaxed">
               {lastResponse || defaultMessage}
@@ -48,7 +48,7 @@ export function JaiD({ lastResponse, lastMood }: JaiDProps) {
         whileHover={{ scale: 1.12 }}
         whileTap={{ scale: 0.92 }}
         className="relative w-[68px] h-[68px] cursor-pointer outline-none"
-        title="JaiD (ใจดี)"
+        title="โกส"
       >
         {/* Soft glow */}
         <motion.div

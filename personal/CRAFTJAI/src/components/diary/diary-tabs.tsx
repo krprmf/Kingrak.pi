@@ -23,7 +23,7 @@ export function DiaryTabs({ remainingToday, lang }: DiaryTabsProps) {
             {lang === "th" ? "เขียนไดอารี่" : "Write your diary"}
           </h1>
           <p className="text-muted-foreground text-sm">
-            {lang === "th" ? "JaiD พร้อมรับฟังคุณแล้ว" : "JaiD is ready to listen"}
+            {lang === "th" ? "JaiD พร้อมรับฟังคุณแล้ว" : "โกส is ready to listen"}
           </p>
         </div>
         <div className="flex rounded-lg border bg-muted p-1 gap-1">

@@ -5,12 +5,6 @@ export default async function DiaryPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("preferred_language")
-    .eq("id", user!.id)
-    .single();
-
   // Count today's characters (not diary entries)
   const now = new Date();
   const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toISOString();
@@ -25,7 +19,9 @@ export default async function DiaryPage() {
 
   const DAILY_LIMIT = process.env.NODE_ENV === "development" ? 99 : 5;
   const remaining = Math.max(0, DAILY_LIMIT - (count ?? 0));
-  const lang = (profile?.preferred_language === "en" ? "en" : "th") as "th" | "en";
+  // App is English-only for now (profiles.preferred_language is ignored).
+  // Thai strings stay in the diary components for a future language toggle.
+  const lang = "en" as const;
 
   return <DiaryTabs remainingToday={remaining} lang={lang} />;
 }

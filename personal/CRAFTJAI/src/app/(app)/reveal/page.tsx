@@ -293,7 +293,7 @@ function RevealContent() {
                 })}
               </div>
 
-              {/* Mascot JaiD response */}
+              {/* Mascot (โกส) response */}
               {mascotResponse && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -302,7 +302,7 @@ function RevealContent() {
                   className="rounded-xl bg-violet-50 border border-violet-100 p-4 text-left max-w-md mx-auto"
                 >
                   <p className="text-xs text-violet-500 font-medium mb-1">
-                    🐾 JaiD says:
+                    โกส says:
                   </p>
                   <p className="text-sm">{mascotResponse}</p>
                 </motion.div>

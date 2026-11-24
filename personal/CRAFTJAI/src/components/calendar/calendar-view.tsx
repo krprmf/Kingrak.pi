@@ -215,7 +215,7 @@ export function CalendarView({ streak, entries, characters }: CalendarViewProps)
                       {/* Mascot response */}
                       {entry.mascot_response && (
                         <div className="rounded-lg bg-violet-50 p-2">
-                          <p className="text-xs text-violet-500 font-medium">🐾 JaiD:</p>
+                          <p className="text-xs text-violet-500 font-medium">โกส:</p>
                           <p className="text-xs mt-0.5">{entry.mascot_response}</p>
                         </div>
                       )}

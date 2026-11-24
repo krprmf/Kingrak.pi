@@ -150,7 +150,7 @@ export default async function CharacterDetailPage({
           {entry?.mascot_response && (
             <div className="rounded-xl bg-violet-50 border border-violet-100 p-4">
               <p className="text-xs text-violet-500 font-medium mb-1">
-                🐾 JaiD said:
+                โกส said:
               </p>
               <p className="text-sm">{entry.mascot_response}</p>
             </div>

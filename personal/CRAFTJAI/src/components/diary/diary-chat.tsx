@@ -16,7 +16,7 @@ interface Message {
 const QUESTIONS = [
   {
     th: "สวัสดี! วันนี้เป็นยังไงบ้าง? เล่าให้ใจดีฟังหน่อยสิ 😊",
-    en: "Hi! How was your day? Tell JaiD about it 😊",
+    en: "Hi! How was your day? Tell โกส about it.",
   },
   {
     th: "เล่าเพิ่มอีกหน่อยสิ มีอะไรที่ประทับใจหรือกังวลไหม?",
@@ -76,7 +76,7 @@ export function DiaryChat({ remainingToday, lang }: DiaryChatProps) {
         role: "jaid",
         text: lang === "th"
           ? "ขอบคุณที่เล่าให้ฟังนะ! พร้อมสร้างตัวละครจากอารมณ์วันนี้แล้ว ✨"
-          : "Thanks for sharing! Ready to create your character ✨",
+          : "Thanks for sharing! Ready to create your character.",
       };
       setMessages([...newMessages, finalMsg]);
       setDone(true);
@@ -92,7 +92,7 @@ export function DiaryChat({ remainingToday, lang }: DiaryChatProps) {
       role: "jaid",
       text: lang === "th"
         ? "โอเค! พร้อมสร้างตัวละครเลย ✨"
-        : "Okay! Let's create your character ✨",
+        : "Okay! Let's create your character.",
     };
     setMessages((prev) => [...prev, finalMsg]);
     setDone(true);
