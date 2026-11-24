@@ -99,21 +99,41 @@ export function MoodStamp({ mood, color, seed, i = 0 }: { mood: string; color: s
   );
 }
 
-/** A character picture taped onto the page, with a kraft label. */
-export function TapedPhoto({ href, src, name, seed, i, size = "w-[60%]" }: { href: string; src: string; name: string; seed: string; i: number; size?: string }) {
-  return (
-    <Link
-      href={href}
-      className={`relative block ${size} bg-white p-1.5 pb-2 shadow-[0_6px_14px_rgba(74,52,38,0.25)] transition-transform hover:z-10 hover:scale-105`}
-      style={{ transform: `rotate(${tilt(seed, i + 21, 6)}deg)` }}
-    >
+/** A character picture taped onto the page, with a kraft label. Links to `href` if given. */
+export function TapedPhoto({ href, src, name, seed, i, size = "w-[60%]" }: { href?: string; src: string; name: string; seed: string; i: number; size?: string }) {
+  const body = (
+    <>
       <WashiTape seed={seed} i={i} className="-top-2.5 left-1/2 -ml-10" />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={src} alt={name} className="aspect-square w-full object-cover sepia-[0.08]" />
       <span className="absolute -bottom-3 right-2 bg-[#d9bf98] px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-cozy-cocoa shadow-sm">
         {name}
       </span>
+    </>
+  );
+  const cls = `relative block ${size} bg-white p-1.5 pb-2 shadow-[0_6px_14px_rgba(74,52,38,0.25)]`;
+  const style = { transform: `rotate(${tilt(seed, i + 21, 6)}deg)` };
+  return href ? (
+    <Link href={href} className={`${cls} transition-transform hover:z-10 hover:scale-105`} style={style}>
+      {body}
     </Link>
+  ) : (
+    <div className={cls} style={style}>
+      {body}
+    </div>
+  );
+}
+
+/** Kraft-paper tag with a small label and a value (place, activity, company). */
+export function KraftTag({ label, value, seed, i }: { label: string; value: string; seed: string; i: number }) {
+  return (
+    <span
+      className="inline-flex items-baseline gap-1.5 bg-[#e9d3b0] px-2.5 py-1 text-xs text-cozy-cocoa shadow-[0_2px_4px_rgba(74,52,38,0.15)]"
+      style={{ transform: `rotate(${tilt(seed, i + 51, 3)}deg)` }}
+    >
+      <span className="text-[10px] font-semibold uppercase tracking-wider text-cozy-mocha">{label}</span>
+      {value}
+    </span>
   );
 }
 
