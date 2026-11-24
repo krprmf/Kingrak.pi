@@ -2,20 +2,21 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Sparkles } from "lucide-react";
+import { Loader2, Sparkles } from "lucide-react";
+import { btnPrimary, chip } from "@/components/game/ui";
 
 const PROMPTS_TH = ["วันนี้ทำอะไร", "รู้สึกยังไงบ้าง", "มีอะไรพิเศษไหม", "อยากเล่าอะไร"];
 const PROMPTS_EN = ["What did you do today", "How are you feeling", "Anything special", "What's on your mind"];
 
 interface DiaryFormProps {
   remainingToday: number;
+  dailyLimit: number;
   lang: "th" | "en";
 }
 
-export function DiaryForm({ remainingToday, lang }: DiaryFormProps) {
+// Free write: a lined notebook page.
+export function DiaryForm({ remainingToday, dailyLimit, lang }: DiaryFormProps) {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -50,51 +51,56 @@ export function DiaryForm({ remainingToday, lang }: DiaryFormProps) {
   };
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-wrap gap-2">
+    <div className="flex h-full flex-col">
+      <div className="flex shrink-0 flex-wrap gap-2 px-4 pt-4">
         {prompts.map((p) => (
           <button
             key={p}
             type="button"
             onClick={() => setContent((prev) => (prev ? `${prev} ` : "") + p + "? ")}
-            className="rounded-full border bg-card px-3 py-1 text-sm text-muted-foreground hover:bg-violet-50 hover:text-violet-700 hover:border-violet-200 transition-colors cursor-pointer"
+            className={chip}
           >
             {p}
           </button>
         ))}
       </div>
 
-      <Textarea
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        placeholder={lang === "th" ? "เขียนไดอารี่ของคุณที่นี่..." : "Write your diary here..."}
-        className="min-h-[240px] resize-none text-base leading-relaxed"
-        disabled={loading}
-      />
-
-      <div className="flex items-center justify-between text-sm text-muted-foreground">
-        <span>{charCount} {lang === "th" ? "ตัวอักษร" : "characters"}</span>
-        <span>{lang === "th" ? `เหลือวันนี้: ${remainingToday}/5` : `Remaining: ${remainingToday}/5`}</span>
+      {/* Lined paper: a repeating gradient draws one line every 2rem, matching the line height */}
+      <div className="min-h-0 flex-1 px-4 py-3">
+        <textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder={lang === "th" ? "เขียนไดอารี่ของคุณที่นี่..." : "Dear diary, today..."}
+          disabled={loading}
+          className="h-full w-full resize-none rounded-2xl border-2 border-cozy-paper bg-white px-4 py-1 text-base text-cozy-cocoa outline-none placeholder:text-cozy-mocha/60 focus:border-cozy-clay [background-attachment:local] [background-image:repeating-linear-gradient(to_bottom,transparent_0,transparent_calc(2rem-1px),#efdcc4_calc(2rem-1px),#efdcc4_2rem)] [line-height:2rem]"
+        />
       </div>
 
-      <Button
-        onClick={handleSubmit}
-        disabled={!canSubmit}
-        size="lg"
-        className="w-full bg-violet-600 hover:bg-violet-700 text-white h-12 text-base cursor-pointer"
-      >
-        {loading ? (
-          <span className="flex items-center gap-2">
-            <span className="animate-spin">⏳</span>
-            {lang === "th" ? "กำลังวิเคราะห์..." : "Analyzing..."}
+      <div className="shrink-0 space-y-2.5 border-t-2 border-cozy-paper bg-cozy-paper/30 p-3">
+        <button type="button" onClick={handleSubmit} disabled={!canSubmit} className={`${btnPrimary} h-12 w-full text-lg`}>
+          {loading ? (
+            <>
+              <Loader2 className="h-5 w-5 animate-spin" />
+              {lang === "th" ? "กำลังวิเคราะห์..." : "โกส is reading your day..."}
+            </>
+          ) : (
+            <>
+              <Sparkles className="h-5 w-5" />
+              {lang === "th" ? "สร้างตัวละคร" : "Create my character"}
+            </>
+          )}
+        </button>
+        <div className="flex items-center justify-between px-1 text-xs text-cozy-mocha">
+          <span>
+            {charCount} {lang === "th" ? "ตัวอักษร" : "characters"}
           </span>
-        ) : (
-          <span className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4" />
-            {lang === "th" ? "สร้างตัวละคร" : "Create Character"}
+          <span>
+            {lang === "th"
+              ? `เหลือวันนี้: ${remainingToday}/${dailyLimit}`
+              : `${remainingToday} of ${dailyLimit} left today`}
           </span>
-        )}
-      </Button>
+        </div>
+      </div>
     </div>
   );
 }

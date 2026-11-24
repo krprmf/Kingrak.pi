@@ -3,10 +3,10 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import Image from "next/image";
+import { btnPrimary, field } from "@/components/game/ui";
 import { toast } from "sonner";
-import { SendHorizonal, SkipForward, Sparkles } from "lucide-react";
+import { Loader2, SendHorizonal, SkipForward, Sparkles } from "lucide-react";
 
 interface Message {
   role: "jaid" | "user";
@@ -30,10 +30,11 @@ const QUESTIONS = [
 
 interface DiaryChatProps {
   remainingToday: number;
+  dailyLimit: number;
   lang: "th" | "en";
 }
 
-export function DiaryChat({ remainingToday, lang }: DiaryChatProps) {
+export function DiaryChat({ remainingToday, dailyLimit, lang }: DiaryChatProps) {
   const [messages, setMessages] = useState<Message[]>([
     { role: "jaid", text: QUESTIONS[0][lang] },
   ]);
@@ -134,9 +135,9 @@ export function DiaryChat({ remainingToday, lang }: DiaryChatProps) {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-200px)] max-w-2xl mx-auto">
+    <div className="flex h-full flex-col">
       {/* Chat area */}
-      <div className="flex-1 overflow-y-auto space-y-4 pb-4">
+      <div className="min-h-0 flex-1 space-y-3 overflow-y-auto px-4 py-4">
         <AnimatePresence initial={false}>
           {messages.map((msg, i) => (
             <motion.div
@@ -144,23 +145,18 @@ export function DiaryChat({ remainingToday, lang }: DiaryChatProps) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
-              className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+              className={`flex items-end gap-2 ${msg.role === "user" ? "justify-end" : "justify-start"}`}
             >
               {msg.role === "jaid" && (
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-400 to-violet-600 flex items-center justify-center mr-2 mt-1 shrink-0">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-white">
-                    <circle cx="7" cy="8" r="2" fill="currentColor" />
-                    <circle cx="12" cy="6" r="2" fill="currentColor" />
-                    <circle cx="17" cy="8" r="2" fill="currentColor" />
-                    <ellipse cx="12" cy="14" rx="5" ry="4" fill="currentColor" />
-                  </svg>
-                </div>
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white ring-2 ring-cozy-paper">
+                  <Image src="/images/jaid-ghost.webp" alt="โกส" width={368} height={512} className="h-8 w-auto" />
+                </span>
               )}
               <div
-                className={`max-w-[75%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
+                className={`max-w-[78%] rounded-2xl px-4 py-2.5 text-[15px] leading-relaxed ${
                   msg.role === "user"
-                    ? "bg-violet-600 text-white rounded-br-md"
-                    : "bg-muted rounded-bl-md"
+                    ? "rounded-br-md bg-cozy-clay text-white shadow-[0_3px_0_rgba(142,76,51,0.45)]"
+                    : "rounded-bl-md border-2 border-cozy-paper bg-white text-cozy-cocoa"
                 }`}
               >
                 {msg.text}
@@ -172,62 +168,66 @@ export function DiaryChat({ remainingToday, lang }: DiaryChatProps) {
       </div>
 
       {/* Input area */}
-      <div className="border-t bg-card pt-4 space-y-3">
+      <div className="shrink-0 space-y-2.5 border-t-2 border-cozy-paper bg-cozy-paper/30 p-3">
         {!done ? (
           <div className="flex gap-2">
-            <Input
+            <input
               ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder={lang === "th" ? "พิมพ์ข้อความ..." : "Type your message..."}
+              placeholder={lang === "th" ? "พิมพ์ข้อความ..." : "Tell โกส..."}
               disabled={loading}
-              className="flex-1 h-11"
+              className={`${field} h-12 flex-1`}
             />
-            <Button
+            <button
+              type="button"
               onClick={handleSend}
               disabled={!input.trim() || loading}
-              size="icon"
-              className="h-11 w-11 bg-violet-600 hover:bg-violet-700 cursor-pointer shrink-0"
+              aria-label="Send"
+              className={`${btnPrimary} h-12 w-12 shrink-0`}
             >
-              <SendHorizonal className="w-4 h-4" />
-            </Button>
+              <SendHorizonal className="h-5 w-5" />
+            </button>
           </div>
         ) : (
-          <Button
+          <button
+            type="button"
             onClick={handleCreateCharacter}
             disabled={loading || remainingToday <= 0}
-            size="lg"
-            className="w-full bg-violet-600 hover:bg-violet-700 text-white h-12 text-base cursor-pointer"
+            className={`${btnPrimary} h-12 w-full text-lg`}
           >
             {loading ? (
-              <span className="flex items-center gap-2">
-                <span className="animate-spin">⏳</span>
-                {lang === "th" ? "กำลังวิเคราะห์..." : "Analyzing..."}
-              </span>
+              <>
+                <Loader2 className="h-5 w-5 animate-spin" />
+                {lang === "th" ? "กำลังวิเคราะห์..." : "โกส is reading your day..."}
+              </>
             ) : (
-              <span className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4" />
-                {lang === "th" ? "สร้างตัวละคร" : "Create Character"}
-              </span>
+              <>
+                <Sparkles className="h-5 w-5" />
+                {lang === "th" ? "สร้างตัวละคร" : "Create my character"}
+              </>
             )}
-          </Button>
+          </button>
         )}
 
-        <div className="flex items-center justify-between text-xs text-muted-foreground">
-          {!done && canSubmit && (
+        <div className="flex items-center justify-between px-1 text-xs text-cozy-mocha">
+          {!done && canSubmit ? (
             <button
               type="button"
               onClick={handleSkip}
-              className="flex items-center gap-1 hover:text-violet-600 cursor-pointer transition-colors"
+              className="flex cursor-pointer items-center gap-1 font-semibold transition-colors hover:text-cozy-clay"
             >
-              <SkipForward className="w-3 h-3" />
-              {lang === "th" ? "ข้ามไปสร้างเลย" : "Skip to create"}
+              <SkipForward className="h-3.5 w-3.5" />
+              {lang === "th" ? "ข้ามไปสร้างเลย" : "That's enough, create now"}
             </button>
+          ) : (
+            <span />
           )}
-          {!done && !canSubmit && <span />}
           <span>
-            {lang === "th" ? `เหลือวันนี้: ${remainingToday}/5` : `Remaining: ${remainingToday}/5`}
+            {lang === "th"
+              ? `เหลือวันนี้: ${remainingToday}/${dailyLimit}`
+              : `${remainingToday} of ${dailyLimit} left today`}
           </span>
         </div>
       </div>

@@ -1,6 +1,10 @@
 import { createClient } from "@/lib/supabase/server";
 import { DiaryTabs } from "@/components/diary/diary-tabs";
+import { GameScene } from "@/components/game/scene";
+import { panel } from "@/components/game/ui";
+import { Sparkles } from "lucide-react";
 
+// The desk: write today's diary (chat with โกส or free write).
 export default async function DiaryPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
@@ -23,5 +27,18 @@ export default async function DiaryPage() {
   // Thai strings stay in the diary components for a future language toggle.
   const lang = "en" as const;
 
-  return <DiaryTabs remainingToday={remaining} lang={lang} />;
+  return (
+    <GameScene
+      title="Today's page"
+      subtitle="โกส is ready to listen"
+      right={
+        <span className={`${panel} flex h-11 items-center gap-1 px-3 text-sm font-semibold text-cozy-cocoa`} title="Characters you can still create today">
+          <Sparkles className="h-4 w-4 text-cozy-honey-dark" />
+          {remaining} left
+        </span>
+      }
+    >
+      <DiaryTabs remainingToday={remaining} dailyLimit={DAILY_LIMIT} lang={lang} />
+    </GameScene>
+  );
 }

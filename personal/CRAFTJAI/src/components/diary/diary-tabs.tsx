@@ -4,64 +4,52 @@ import { useState } from "react";
 import { DiaryChat } from "./diary-chat";
 import { DiaryForm } from "./diary-form";
 import { MessageCircle, PenLine } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { paperCard } from "@/components/game/ui";
 
 interface DiaryTabsProps {
   remainingToday: number;
+  dailyLimit: number;
   lang: "th" | "en";
 }
 
-export function DiaryTabs({ remainingToday, lang }: DiaryTabsProps) {
+// The journal page on the desk: switch between chatting with โกส and free writing.
+export function DiaryTabs({ remainingToday, dailyLimit, lang }: DiaryTabsProps) {
   const [mode, setMode] = useState<"chat" | "write">("chat");
 
+  const tabs = [
+    { id: "chat" as const, icon: MessageCircle, label: lang === "th" ? "แชท" : "Chat with โกส" },
+    { id: "write" as const, icon: PenLine, label: lang === "th" ? "เขียนเอง" : "Free write" },
+  ];
+
   return (
-    <div className="max-w-2xl mx-auto">
-      {/* Mode toggle */}
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="text-2xl font-bold">
-            {lang === "th" ? "เขียนไดอารี่" : "Write your diary"}
-          </h1>
-          <p className="text-muted-foreground text-sm">
-            {lang === "th" ? "JaiD พร้อมรับฟังคุณแล้ว" : "โกส is ready to listen"}
-          </p>
-        </div>
-        <div className="flex rounded-lg border bg-muted p-1 gap-1">
+    <div className={`${paperCard} flex h-full w-full max-w-xl flex-col overflow-hidden`}>
+      {/* Mode toggle, like two tabs on a notebook */}
+      <div className="flex shrink-0 gap-1.5 border-b-2 border-cozy-paper bg-cozy-paper/40 p-2">
+        {tabs.map((t) => (
           <button
+            key={t.id}
             type="button"
-            onClick={() => setMode("chat")}
-            className={cn(
-              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer",
-              mode === "chat"
-                ? "bg-white text-violet-700 shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
-            )}
+            onClick={() => setMode(t.id)}
+            className={`flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold transition-colors ${
+              mode === t.id
+                ? "bg-cozy-cream text-cozy-cocoa shadow-[0_3px_0_rgba(74,52,38,0.15)]"
+                : "text-cozy-mocha hover:bg-cozy-cream/60"
+            }`}
           >
-            <MessageCircle className="w-3.5 h-3.5" />
-            {lang === "th" ? "แชท" : "Chat"}
+            <t.icon className="h-4 w-4" />
+            {t.label}
           </button>
-          <button
-            type="button"
-            onClick={() => setMode("write")}
-            className={cn(
-              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-colors cursor-pointer",
-              mode === "write"
-                ? "bg-white text-violet-700 shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
-            )}
-          >
-            <PenLine className="w-3.5 h-3.5" />
-            {lang === "th" ? "เขียนเอง" : "Free Write"}
-          </button>
-        </div>
+        ))}
       </div>
 
-      {/* Content */}
-      {mode === "chat" ? (
-        <DiaryChat remainingToday={remainingToday} lang={lang} />
-      ) : (
-        <DiaryForm remainingToday={remainingToday} lang={lang} />
-      )}
+      {/* Page content */}
+      <div className="min-h-0 flex-1">
+        {mode === "chat" ? (
+          <DiaryChat remainingToday={remainingToday} dailyLimit={dailyLimit} lang={lang} />
+        ) : (
+          <DiaryForm remainingToday={remainingToday} dailyLimit={dailyLimit} lang={lang} />
+        )}
+      </div>
     </div>
   );
 }
