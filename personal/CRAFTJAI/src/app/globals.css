@@ -128,3 +128,67 @@
     @apply font-sans;
   }
 }
+/* Game-style idle animations (title screen). Off for users who prefer less motion. */
+@keyframes cj-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes cj-mote {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 0.9; }
+  100% { transform: translateY(-80px); opacity: 0; }
+}
+@keyframes cj-slow-pan {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-2%); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cj-bob { animation: cj-bob 3s ease-in-out infinite; }
+  .cj-mote { animation: cj-mote 6s ease-in-out infinite; }
+  .cj-slow-pan { animation: cj-slow-pan 30s ease-in-out infinite; }
+}
+
+/* Home room: slow float for the room and its overlay, drifting clouds. */
+@keyframes cj-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes cj-cloud {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(40px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cj-float { animation: cj-float 6s ease-in-out infinite; }
+  .cj-cloud { animation: cj-cloud 36s ease-in-out infinite; }
+}
+
+/* Cozy lofi palette (design tokens). Tailwind v4 turns each --color-* into
+   utilities: bg-cozy-clay, text-cozy-cocoa, border-cozy-paper, ... */
+@theme {
+  --color-cozy-cream: #fff6ea;      /* panels, tags */
+  --color-cozy-paper: #efdcc4;      /* soft borders, chips */
+  --color-cozy-cocoa: #4a3426;      /* main text */
+  --color-cozy-mocha: #7a5a46;      /* secondary text */
+  --color-cozy-clay: #b8694b;       /* primary buttons */
+  --color-cozy-clay-light: #c77a5c;
+  --color-cozy-clay-dark: #8e4c33;
+  --color-cozy-honey: #e3b261;      /* secondary buttons, highlights */
+  --color-cozy-honey-light: #ebc27c;
+  --color-cozy-honey-dark: #b98838;
+  --color-cozy-sage: #8fa88a;       /* calm accents */
+  --color-cozy-sage-dark: #6b8467;
+}
+
+/* JaiD ghost: floats and sways a little, out of sync with the room. */
+@keyframes cj-ghost {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .cj-ghost { animation: cj-ghost 4.5s ease-in-out infinite; }
+}
+
+/* Game font stack: Fredoka for Latin, Itim for Thai letters (see src/lib/fonts.ts). */
+.font-game {
+  font-family: var(--font-fredoka), var(--font-itim), ui-rounded, system-ui, sans-serif;
+}

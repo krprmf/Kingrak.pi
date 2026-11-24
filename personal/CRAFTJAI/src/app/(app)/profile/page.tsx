@@ -71,7 +71,9 @@ export default async function ProfilePage() {
           <h1 className="text-2xl font-bold">
             {profile?.display_name ?? user.email}
           </h1>
-          <p className="text-sm text-muted-foreground">{user.email}</p>
+          <p className="text-sm text-muted-foreground">
+            {user.is_anonymous ? "Guest: progress is saved on this device only" : user.email}
+          </p>
         </div>
       </div>
 

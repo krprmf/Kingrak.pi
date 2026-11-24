@@ -4,10 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
-import { PenLine, Grid3X3, CalendarDays, User, Flame, Sparkles } from "lucide-react";
+import { House, PenLine, Grid3X3, CalendarDays, User, Flame, Sparkles } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const NAV_ITEMS: { href: string; label: string; icon: LucideIcon }[] = [
+  { href: "/home", label: "Home", icon: House },
   { href: "/diary", label: "Diary", icon: PenLine },
   { href: "/collection", label: "Collection", icon: Grid3X3 },
   { href: "/calendar", label: "Calendar", icon: CalendarDays },
@@ -27,7 +28,7 @@ export function Sidebar({ currentStreak, uniqueMoods, totalCharacters }: Sidebar
     <>
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex w-60 flex-col border-r bg-card p-4 gap-2">
-        <Link href="/diary" className="flex items-center gap-2 px-3 py-2 mb-4">
+        <Link href="/home" className="flex items-center gap-2 px-3 py-2 mb-4">
           <Sparkles className="w-5 h-5 text-violet-500" />
           <span className="text-xl font-bold text-violet-600">CRAFTJAI</span>
         </Link>
