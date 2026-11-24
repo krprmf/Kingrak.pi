@@ -34,7 +34,7 @@ export async function middleware(request: NextRequest) {
   }
 
   if (user && pathname.startsWith("/login")) {
-    return NextResponse.redirect(new URL("/diary", request.url));
+    return NextResponse.redirect(new URL("/home", request.url));
   }
 
   return response;
@@ -42,6 +42,8 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|manifest.json|sw.js|icons/|api/).*)",
+    // Skip Next internals, API routes and static image files (otherwise logged-out
+    // visitors get redirected to /login instead of receiving the image).
+    "/((?!_next/static|_next/image|favicon.ico|manifest.json|sw.js|icons/|api/|.*\\.(?:png|jpg|jpeg|gif|webp|svg|ico)$).*)",
   ],
 };
