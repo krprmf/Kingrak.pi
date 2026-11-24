@@ -3,7 +3,11 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState, Suspense, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+import { Loader2 } from "lucide-react";
+import { GameScene } from "@/components/game/scene";
+import { paperCard, btnPrimary, btnSecondary } from "@/components/game/ui";
 import { EMOTION_MAP, type EmotionKey } from "@/lib/constants/emotions";
 import { RARITY_CONFIG, type RarityType } from "@/types/character";
 import type { MoodItem } from "@/types/emotion";
@@ -143,11 +147,11 @@ function RevealContent() {
   }, [phase, generateAll]);
 
   const LOADING_MESSAGES = [
-    "Analyzing your emotions...",
-    "Mixing colors...",
-    "Drawing your character...",
-    "Adding personality...",
-    "Final touches...",
+    "Reading your day...",
+    "Mixing the colors of your feelings...",
+    "Drawing your little friend...",
+    "Adding a bit of personality...",
+    "Almost there...",
   ];
 
   const [msgIndex, setMsgIndex] = useState(0);
@@ -160,34 +164,50 @@ function RevealContent() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
 
+  // The ghost, floating while it works
+  const ghost = (
+    <div className="cj-ghost mx-auto w-24 sm:w-28">
+      <Image src="/images/jaid-ghost.webp" alt="โกส" width={368} height={512} className="h-auto w-full opacity-90" />
+    </div>
+  );
+
   if (error) {
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-violet-50 via-white to-amber-50">
-        <div className="text-center space-y-4 px-6">
-          <p className="text-red-500">{error}</p>
-          <Button onClick={() => router.push("/diary")} variant="outline" className="cursor-pointer">
-            Back to Diary
-          </Button>
+      <GameScene title="Oh no" subtitle="Something went wrong">
+        <div className={`${paperCard} m-auto w-full max-w-sm space-y-4 p-6 text-center`}>
+          {ghost}
+          <p className="text-cozy-cocoa">{error}</p>
+          <button type="button" onClick={() => router.push("/diary")} className={`${btnPrimary} h-12 w-full`}>
+            Back to the desk
+          </button>
         </div>
-      </div>
+      </GameScene>
     );
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-violet-50 via-white to-amber-50 overflow-y-auto">
-      <div className="text-center max-w-2xl px-6 py-12">
+    <GameScene
+      title={phase === "reveal" ? "A new page!" : "Making your page"}
+      subtitle={phase === "reveal" ? "Your day became a scene" : "โกส is working on it"}
+    >
+      <div className="m-auto w-full max-w-2xl overflow-y-auto py-2 text-center">
         <AnimatePresence mode="wait">
-          {/* Phase: Show detected moods */}
-          {phase === "moods" && moods.length > 0 && (
+          {/* Phase: detected moods */}
+          {(phase === "loading" || phase === "moods") && (
             <motion.div
               key="moods"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="space-y-4"
+              className={`${paperCard} mx-auto max-w-md space-y-5 p-6`}
             >
-              <p className="text-muted-foreground">Detected {moods.length} emotion{moods.length > 1 ? "s" : ""}</p>
-              <div className="flex justify-center gap-4">
+              {ghost}
+              <p className="text-cozy-mocha">
+                {moods.length > 0
+                  ? `I felt ${moods.length} feeling${moods.length > 1 ? "s" : ""} in your day`
+                  : "Reading your day..."}
+              </p>
+              <div className="flex justify-center gap-5">
                 {moods.map((m, i) => {
                   const emotion = EMOTION_MAP[m.primary_mood];
                   return (
@@ -198,13 +218,15 @@ function RevealContent() {
                       transition={{ delay: i * 0.3 }}
                       className="text-center"
                     >
-                      <div
-                        className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-2"
-                        style={{ backgroundColor: `${emotion.hex}20` }}
-                      >
-                        {emotion.emoji}
-                      </div>
-                      <p className="text-sm font-medium capitalize" style={{ color: emotion.hex }}>
+                      {/* A glowing orb in the mood's color */}
+                      <span
+                        className="mx-auto mb-2 block h-14 w-14 rounded-full ring-4 ring-white"
+                        style={{
+                          background: `radial-gradient(circle at 35% 30%, #ffffffcc, ${emotion.hex} 60%)`,
+                          boxShadow: `0 0 24px ${emotion.hex}88`,
+                        }}
+                      />
+                      <p className="text-sm font-semibold capitalize" style={{ color: emotion.hex }}>
                         {m.primary_mood}
                       </p>
                     </motion.div>
@@ -214,45 +236,32 @@ function RevealContent() {
             </motion.div>
           )}
 
-          {/* Phase: Generating */}
+          {/* Phase: generating */}
           {phase === "generating" && (
             <motion.div
               key="generating"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className={`${paperCard} mx-auto max-w-md space-y-4 p-6`}
             >
-              <p className="text-lg font-medium">{LOADING_MESSAGES[msgIndex]}</p>
-              <p className="text-sm text-muted-foreground">
-                Generating {genProgress}/{moods.length} characters...
+              {ghost}
+              <p className="text-lg font-semibold text-cozy-cocoa">{LOADING_MESSAGES[msgIndex]}</p>
+              <p className="flex items-center justify-center gap-2 text-sm text-cozy-mocha">
+                <Loader2 className="h-4 w-4 animate-spin" />
+                Drawing {genProgress} of {moods.length}
               </p>
-              <div className="flex justify-center gap-1">
-                {[0, 1, 2].map((i) => (
-                  <motion.div
-                    key={i}
-                    className="w-2.5 h-2.5 rounded-full bg-violet-400"
-                    animate={{ scale: [1, 1.5, 1] }}
-                    transition={{ repeat: Infinity, duration: 1, delay: i * 0.2 }}
-                  />
-                ))}
-              </div>
             </motion.div>
           )}
 
-          {/* Phase: Reveal all characters */}
+          {/* Phase: reveal */}
           {phase === "reveal" && characters.length > 0 && (
-            <motion.div
-              key="reveal"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="space-y-6"
-            >
-              <h2 className="text-xl font-bold">
-                {characters.length === 1 ? "Your character!" : `${characters.length} characters from your diary!`}
-              </h2>
-
-              <div className={`grid gap-4 ${characters.length === 1 ? "max-w-xs mx-auto" : characters.length === 2 ? "grid-cols-2 max-w-lg mx-auto" : "grid-cols-3 max-w-2xl mx-auto"}`}>
+            <motion.div key="reveal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-5">
+              <div
+                className={`mx-auto grid gap-4 ${
+                  characters.length === 1 ? "max-w-xs" : characters.length === 2 ? "max-w-lg grid-cols-2" : "max-w-2xl grid-cols-3"
+                }`}
+              >
                 {characters.map((char, i) => {
                   const emotion = EMOTION_MAP[char.mood];
                   const rarity = RARITY_CONFIG[char.rarity];
@@ -262,30 +271,25 @@ function RevealContent() {
                       initial={{ opacity: 0, scale: 0.8, rotateY: 180 }}
                       animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                       transition={{ delay: i * 0.3, type: "spring", duration: 0.8 }}
-                      className="rounded-2xl overflow-hidden border-3 shadow-lg bg-white"
-                      style={{ borderColor: rarity.color }}
+                      className="overflow-hidden rounded-[22px] border-4 bg-cozy-cream shadow-[0_6px_0_rgba(74,52,38,0.18)]"
+                      style={{ borderColor: emotion?.hex ?? "#efdcc4" }}
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={char.image_url}
-                        alt={char.animal_name}
-                        className="w-full aspect-square object-cover"
-                      />
-                      <div className="p-3 text-center">
-                        <p className="font-semibold">{char.animal_name}</p>
-                        <p className="text-xs text-muted-foreground capitalize">
-                          {emotion?.emoji} {char.mood}
+                      <img src={char.image_url} alt={char.animal_name} className="aspect-square w-full object-cover" />
+                      <div className="space-y-1 p-3 text-center">
+                        <p className="font-bold text-cozy-cocoa">{char.animal_name}</p>
+                        <p className="flex items-center justify-center gap-1.5 text-xs capitalize text-cozy-mocha">
+                          <span className="h-2 w-2 rounded-full" style={{ backgroundColor: emotion?.hex }} />
+                          {char.mood}
                         </p>
-                        <div className="flex items-center justify-center gap-2 mt-1">
+                        <div className="flex items-center justify-center gap-2 pt-0.5">
                           <span
-                            className="text-xs font-medium px-2 py-0.5 rounded-full text-white"
+                            className="rounded-full px-2 py-0.5 text-xs font-semibold text-white"
                             style={{ backgroundColor: rarity.color }}
                           >
-                            {rarity.icon} {rarity.label}
+                            {rarity.label}
                           </span>
-                          <span className="text-xs text-muted-foreground">
-                            PWR {char.power_level}
-                          </span>
+                          <span className="text-xs text-cozy-mocha">PWR {char.power_level}</span>
                         </div>
                       </div>
                     </motion.div>
@@ -293,18 +297,21 @@ function RevealContent() {
                 })}
               </div>
 
-              {/* Mascot (โกส) response */}
+              {/* What the ghost says, in the same style as the room's dialogue box */}
               {mascotResponse && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: characters.length * 0.3 + 0.3 }}
-                  className="rounded-xl bg-violet-50 border border-violet-100 p-4 text-left max-w-md mx-auto"
+                  className="mx-auto flex max-w-md items-center gap-3 rounded-2xl border-2 border-cozy-paper bg-cozy-cream/90 px-3 py-2 text-left text-cozy-cocoa shadow-[0_4px_0_rgba(74,52,38,0.18)]"
                 >
-                  <p className="text-xs text-violet-500 font-medium mb-1">
-                    โกส says:
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white/70 ring-2 ring-cozy-paper">
+                    <Image src="/images/jaid-ghost.webp" alt="" width={368} height={512} className="h-9 w-auto" />
+                  </span>
+                  <p className="text-sm leading-snug">
+                    <span className="mr-1 font-semibold text-cozy-mocha">โกส:</span>
+                    {mascotResponse}
                   </p>
-                  <p className="text-sm">{mascotResponse}</p>
                 </motion.div>
               )}
 
@@ -312,33 +319,35 @@ function RevealContent() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: characters.length * 0.3 + 0.6 }}
-                className="flex gap-3 justify-center pt-2"
+                className="flex flex-wrap justify-center gap-3 pt-1"
               >
-                <Button
-                  variant="outline"
-                  onClick={() => router.push("/collection")}
-                  className="cursor-pointer"
-                >
-                  View Collection
-                </Button>
-                <Button
-                  onClick={() => router.push("/diary")}
-                  className="bg-violet-600 hover:bg-violet-700 text-white cursor-pointer"
-                >
-                  Write Another
-                </Button>
+                <Link href="/collection" className={`${btnSecondary} h-12 px-5`}>
+                  See it in my book
+                </Link>
+                <Link href="/home" className={`${btnPrimary} h-12 px-5`}>
+                  Back to my room
+                </Link>
               </motion.div>
+              <Link href="/diary" className="inline-block text-sm font-semibold text-cozy-mocha hover:text-cozy-clay">
+                Write another page
+              </Link>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-    </div>
+    </GameScene>
   );
 }
 
 export default function RevealPage() {
   return (
-    <Suspense fallback={<div className="flex items-center justify-center h-full"><span className="animate-spin text-2xl">⏳</span></div>}>
+    <Suspense
+      fallback={
+        <div className="flex h-dvh items-center justify-center bg-[#fde8d7]">
+          <Loader2 className="h-8 w-8 animate-spin text-cozy-clay" />
+        </div>
+      }
+    >
       <RevealContent />
     </Suspense>
   );
