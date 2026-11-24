@@ -190,5 +190,6 @@
 
 /* Game font stack: Fredoka for Latin, Itim for Thai letters (see src/lib/fonts.ts). */
 .font-game {
+  --font-itim: var(--font-itim-latin), var(--font-itim-thai);
   font-family: var(--font-fredoka), var(--font-itim), ui-rounded, system-ui, sans-serif;
 }

@@ -1,18 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Noto_Sans_Thai } from "next/font/google";
+import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
 
-const inter = Inter({
+// Self-hosted (src/fonts), see src/lib/fonts.ts for why. Noto Sans Thai was
+// removed: its --font-thai variable was never used, Thai already used the system font.
+const inter = localFont({
+  src: "../fonts/inter-latin.woff2",
+  weight: "100 900",
+  display: "swap",
   variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const notoSansThai = Noto_Sans_Thai({
-  variable: "--font-thai",
-  subsets: ["thai"],
-  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -36,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${notoSansThai.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
         <TooltipProvider>
           {children}
