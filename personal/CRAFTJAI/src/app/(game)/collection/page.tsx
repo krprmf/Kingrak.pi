@@ -3,11 +3,11 @@ import { createClient } from "@/lib/supabase/server";
 import type { EmotionKey } from "@/lib/constants/emotions";
 import { GameScene } from "@/components/game/scene";
 import { panel } from "@/components/game/ui";
-import { JournalBook, type JournalPage } from "@/components/journal/journal-book";
+import { JournalBook, type JournalEntry } from "@/components/journal/journal-book";
 import { Library } from "lucide-react";
 
-// The journal: one book, one page per diary entry with its pictures taped on.
-// Opens on the newest page; flip back to earlier days.
+// The journal: one book, one page per day (all entries of that day together),
+// with the pictures taped on. Opens on the newest day; flip back to earlier days.
 export default async function JournalPageRoute() {
   const supabase = await createClient();
   const {
@@ -21,7 +21,7 @@ export default async function JournalPageRoute() {
     .eq("user_id", user!.id)
     .order("created_at", { ascending: true });
 
-  const pages: JournalPage[] = (entries ?? []).map((e) => ({
+  const pages: JournalEntry[] = (entries ?? []).map((e) => ({
     id: e.id,
     createdAt: e.created_at,
     content: e.content,
@@ -38,7 +38,7 @@ export default async function JournalPageRoute() {
   return (
     <GameScene
       title="My journal"
-      subtitle={pages.length ? `${pages.length} page${pages.length === 1 ? "" : "s"} of your days` : "A book of your days"}
+      subtitle="A book of your days"
       right={
         <Link
           href="/collection/feelings"
@@ -49,7 +49,7 @@ export default async function JournalPageRoute() {
         </Link>
       }
     >
-      <JournalBook pages={pages} />
+      <JournalBook entries={pages} />
     </GameScene>
   );
 }

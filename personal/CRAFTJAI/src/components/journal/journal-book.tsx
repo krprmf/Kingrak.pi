@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
@@ -8,32 +8,55 @@ import { ChevronLeft, ChevronRight, PenLine } from "lucide-react";
 import { EMOTION_MAP, type EmotionKey } from "@/lib/constants/emotions";
 import { btnPrimary, panel } from "@/components/game/ui";
 
-export type JournalPage = {
+export type JournalEntry = {
   id: string;
-  createdAt: string;
+  createdAt: string; // ISO timestamp (UTC)
   content: string;
   mood: EmotionKey | null;
   reply: string | null;
   characters: { id: string; imageUrl: string; name: string; mood: EmotionKey }[];
 };
 
-// One journal book. Each diary entry is a page with its pictures taped on;
-// it opens on the newest page and you flip back to earlier days
-// (arrow buttons, swipe on touch, or the left/right keys).
-export function JournalBook({ pages }: { pages: JournalPage[] }) {
-  const [index, setIndex] = useState(Math.max(0, pages.length - 1));
+type Day = { key: string; date: Date; entries: JournalEntry[] };
+
+// Older ghost replies were written in Thai; only show English ones.
+const THAI_SENTENCE = /[\u0E00-\u0E7F]{4,}/;
+
+// Days must follow the reader's own clock (a 1 a.m. entry in Bangkok is "today" there,
+// not "yesterday" in UTC), so the book is only drawn in the browser.
+const noop = () => () => {};
+const useOnClient = () => useSyncExternalStore(noop, () => true, () => false);
+
+/** Group entries (oldest first) into one page per local calendar day. */
+function groupByDay(entries: JournalEntry[]): Day[] {
+  const days: Day[] = [];
+  for (const e of entries) {
+    const d = new Date(e.createdAt);
+    const key = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+    const last = days[days.length - 1];
+    if (last?.key === key) last.entries.push(e);
+    else days.push({ key, date: d, entries: [e] });
+  }
+  return days;
+}
+
+// One journal book, one page per day. Opens on the newest day; flip back to
+// earlier days with the buttons, a swipe, or the left/right arrow keys.
+export function JournalBook({ entries }: { entries: JournalEntry[] }) {
+  const onClient = useOnClient();
+  const days = useMemo(() => (onClient ? groupByDay(entries) : []), [entries, onClient]);
+  const [index, setIndex] = useState<number | null>(null); // null = newest day
   const [dir, setDir] = useState(0); // -1 = flipping back in time, 1 = forward
+  const current = index ?? days.length - 1;
 
   const go = useCallback(
     (step: -1 | 1) => {
-      setIndex((i) => {
-        const next = i + step;
-        if (next < 0 || next >= pages.length) return i;
-        setDir(step);
-        return next;
-      });
+      const next = current + step;
+      if (next < 0 || next >= days.length) return;
+      setDir(step);
+      setIndex(next);
     },
-    [pages.length]
+    [current, days.length]
   );
 
   useEffect(() => {
@@ -45,7 +68,12 @@ export function JournalBook({ pages }: { pages: JournalPage[] }) {
     return () => window.removeEventListener("keydown", onKey);
   }, [go]);
 
-  if (pages.length === 0) {
+  if (!onClient) {
+    // Same size as the book, so nothing jumps when it appears
+    return <div className="m-auto h-full w-full max-w-md" />;
+  }
+
+  if (days.length === 0) {
     return (
       <div className="m-auto w-full max-w-sm">
         <Paper>
@@ -61,7 +89,7 @@ export function JournalBook({ pages }: { pages: JournalPage[] }) {
     );
   }
 
-  const page = pages[index];
+  const day = days[current];
 
   return (
     <div className="m-auto flex h-full w-full max-w-md flex-col gap-3">
@@ -73,7 +101,7 @@ export function JournalBook({ pages }: { pages: JournalPage[] }) {
 
         <AnimatePresence initial={false} custom={dir}>
           <motion.div
-            key={page.id}
+            key={day.key}
             custom={dir}
             variants={flip}
             initial="enter"
@@ -91,7 +119,7 @@ export function JournalBook({ pages }: { pages: JournalPage[] }) {
             }}
           >
             <Paper>
-              <PageContent page={page} />
+              <DayPage day={day} />
             </Paper>
           </motion.div>
         </AnimatePresence>
@@ -102,18 +130,18 @@ export function JournalBook({ pages }: { pages: JournalPage[] }) {
         <button
           type="button"
           onClick={() => go(-1)}
-          disabled={index === 0}
+          disabled={current === 0}
           className={`${panel} flex h-11 cursor-pointer items-center gap-1 px-3 text-sm font-semibold text-cozy-cocoa transition-opacity disabled:cursor-default disabled:opacity-40`}
         >
           <ChevronLeft className="h-4.5 w-4.5" /> Earlier
         </button>
         <span className="text-sm text-cozy-mocha">
-          Page {index + 1} of {pages.length}
+          Day {current + 1} of {days.length}
         </span>
         <button
           type="button"
           onClick={() => go(1)}
-          disabled={index === pages.length - 1}
+          disabled={current === days.length - 1}
           className={`${panel} flex h-11 cursor-pointer items-center gap-1 px-3 text-sm font-semibold text-cozy-cocoa transition-opacity disabled:cursor-default disabled:opacity-40`}
         >
           Later <ChevronRight className="h-4.5 w-4.5" />
@@ -141,53 +169,67 @@ function Paper({ children }: { children: React.ReactNode }) {
   );
 }
 
-function PageContent({ page }: { page: JournalPage }) {
-  const d = new Date(page.createdAt);
-  const day = d.toLocaleDateString("en-US", { weekday: "long" });
-  const date = d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
-  const time = d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
-  const mood = page.mood ? EMOTION_MAP[page.mood] : null;
-  // Older ghost replies were written in Thai; only show English ones.
-  const reply = page.reply && !/[\u0E00-\u0E7F]{4,}/.test(page.reply) ? page.reply : null;
+function DayPage({ day }: { day: Day }) {
+  const weekday = day.date.toLocaleDateString("en-US", { weekday: "long" });
+  const date = day.date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  const several = day.entries.length > 1;
 
   return (
     <div className="flex h-full flex-col gap-3 overflow-y-auto px-6 pb-5 pt-5">
-      {/* Date header */}
-      <div className="flex items-baseline justify-between gap-2 border-b-2 border-dashed border-cozy-paper pb-2">
+      {/* Day header */}
+      <div className="flex items-baseline justify-between gap-2 border-b-2 border-cozy-paper pb-2">
         <div>
-          <p className="text-lg font-bold leading-tight text-cozy-cocoa">{day}</p>
-          <p className="text-xs text-cozy-mocha">
-            {date} · {time}
-          </p>
+          <p className="text-lg font-bold leading-tight text-cozy-cocoa">{weekday}</p>
+          <p className="text-xs text-cozy-mocha">{date}</p>
         </div>
+        {/* one dot per mood that visited this day */}
+        <div className="flex gap-1" aria-label="Moods this day">
+          {day.entries.map(
+            (e) => e.mood && <span key={e.id} className="h-3 w-3 rounded-full ring-2 ring-white" style={{ backgroundColor: EMOTION_MAP[e.mood].hex }} />
+          )}
+        </div>
+      </div>
+
+      {day.entries.map((entry, i) => (
+        <EntryBlock key={entry.id} entry={entry} showDivider={several && i > 0} />
+      ))}
+    </div>
+  );
+}
+
+function EntryBlock({ entry, showDivider }: { entry: JournalEntry; showDivider: boolean }) {
+  const time = new Date(entry.createdAt).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+  const mood = entry.mood ? EMOTION_MAP[entry.mood] : null;
+  const reply = entry.reply && !THAI_SENTENCE.test(entry.reply) ? entry.reply : null;
+
+  return (
+    <section className={`space-y-3 ${showDivider ? "border-t-2 border-dashed border-cozy-paper pt-4" : ""}`}>
+      {/* Time + mood of this entry */}
+      <div className="flex items-center justify-between">
+        <span className="text-xs font-semibold text-cozy-mocha">{time}</span>
         {mood && (
-          <span
-            className="flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold capitalize text-white"
-            style={{ backgroundColor: mood.hex }}
-          >
-            {page.mood}
+          <span className="rounded-full px-2.5 py-0.5 text-xs font-semibold capitalize text-white" style={{ backgroundColor: mood.hex }}>
+            {entry.mood}
           </span>
         )}
       </div>
 
       {/* Pictures taped onto the page */}
-      {page.characters.length > 0 && (
+      {entry.characters.length > 0 && (
         <div className="flex flex-wrap justify-center gap-3 py-1">
-          {page.characters.map((c, i) => (
+          {entry.characters.map((c, i) => (
             <Link
               key={c.id}
               href={`/character/${c.id}`}
               className={`relative block bg-white p-1.5 pb-5 shadow-[0_4px_10px_rgba(74,52,38,0.2)] transition-transform hover:scale-105 ${
-                page.characters.length > 1 ? "w-[42%]" : "w-[70%]"
+                entry.characters.length > 1 ? "w-[42%]" : "w-[62%]"
               } ${i % 2 ? "rotate-2" : "-rotate-2"}`}
             >
               {/* washi tape */}
               <span className="absolute -top-2 left-1/2 h-4 w-14 -translate-x-1/2 -rotate-3 bg-cozy-honey/60" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={c.imageUrl} alt={c.name} className="aspect-square w-full object-cover" />
-              <span className="absolute inset-x-0 bottom-0.5 text-center text-[11px] font-semibold text-cozy-mocha">
-                {c.name}
-              </span>
+              <span className="absolute inset-x-0 bottom-0.5 text-center text-[11px] font-semibold text-cozy-mocha">{c.name}</span>
             </Link>
           ))}
         </div>
@@ -195,12 +237,12 @@ function PageContent({ page }: { page: JournalPage }) {
 
       {/* What you wrote, in a handwriting-like font on lined paper */}
       <p className="whitespace-pre-line text-[15px] text-cozy-cocoa [background-image:repeating-linear-gradient(to_bottom,transparent_0,transparent_calc(1.75rem-1px),#efdcc4_calc(1.75rem-1px),#efdcc4_1.75rem)] [font-family:var(--font-itim)] [line-height:1.75rem]">
-        {page.content}
+        {entry.content}
       </p>
 
       {/* The ghost's little note */}
       {reply && (
-        <div className="mt-auto flex items-start gap-2 rounded-xl bg-cozy-honey/20 p-3 text-sm text-cozy-cocoa">
+        <div className="flex items-start gap-2 rounded-xl bg-cozy-honey/20 p-3 text-sm text-cozy-cocoa">
           <Image src="/images/jaid-ghost.webp" alt="" width={368} height={512} className="h-8 w-auto shrink-0" />
           <p>
             <span className="font-semibold text-cozy-mocha">โกส: </span>
@@ -208,6 +250,6 @@ function PageContent({ page }: { page: JournalPage }) {
           </p>
         </div>
       )}
-    </div>
+    </section>
   );
 }
