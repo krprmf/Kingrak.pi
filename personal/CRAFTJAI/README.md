@@ -13,14 +13,14 @@ Related artifacts on Hugging Face: [CRAFTJAI-MoodGen-LoRA](https://huggingface.c
 
 - Diary in two modes: guided chat with the JaiD mascot, or free write (Thai / English)
 - Mood analysis with Gemini 2.5 Flash: 1 to 3 moods per entry (Plutchik 8 emotions + valence/arousal/dominance) and a reply from JaiD
-- Character generation with FLUX.1-schnell (Hugging Face Inference), stored in Supabase Storage
+- Character generation with FLUX.1-schnell (Cloudflare Workers AI), stored in Supabase Storage
 - Collection grouped into 8 mood albums, character detail pages
 - Calendar view with per-day entries and mood distribution
 - Gamification: rarity based on reflection depth, achievements, streak rewards, daily limit
 
 ## Stack
 
-Next.js 16 (App Router) · React 19 · Tailwind CSS 4 · shadcn/ui · Supabase (Auth, Postgres, Storage) · Gemini API · Hugging Face Inference
+Next.js 16 (App Router) · React 19 · Tailwind CSS 4 · shadcn/ui · Supabase (Auth, Postgres, Storage) · Gemini API · Cloudflare Workers AI
 
 ## Getting started
 
@@ -35,7 +35,8 @@ NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 SUPABASE_SERVICE_ROLE_KEY=
 GEMINI_API_KEY=
-HF_TOKEN=
+CLOUDFLARE_ACCOUNT_ID=
+CLOUDFLARE_API_TOKEN=
 NEXT_PUBLIC_APP_URL=
 ```
 
