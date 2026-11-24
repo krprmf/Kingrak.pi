@@ -119,7 +119,7 @@ export default async function HomePage() {
                 key={c.id}
                 href={`/character/${c.id}`}
                 style={{ ...pct(slot), borderColor: color, transform: WALL_SKEW }}
-                className="absolute rounded-md border-[3px] bg-white p-[3%] shadow-md transition-transform hover:-rotate-3 hover:scale-110"
+                className="absolute rounded-md border-[3px] bg-white p-[2px] shadow-md transition-transform hover:-rotate-3 hover:scale-110"
                 title={c.animal_name}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
