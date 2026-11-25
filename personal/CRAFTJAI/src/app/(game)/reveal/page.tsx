@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Loader2 } from "lucide-react";
 import { GameScene } from "@/components/game/scene";
 import { paperCard, btnPrimary, btnSecondary } from "@/components/game/ui";
-import { EMOTION_MAP, type EmotionKey } from "@/lib/constants/emotions";
+import { getEmotion, type EmotionKey } from "@/lib/constants/emotions";
 import { RARITY_CONFIG, type RarityType } from "@/types/character";
 import type { MoodItem } from "@/types/emotion";
 import { toast } from "sonner";
@@ -209,7 +209,7 @@ function RevealContent() {
               </p>
               <div className="flex justify-center gap-5">
                 {moods.map((m, i) => {
-                  const emotion = EMOTION_MAP[m.primary_mood];
+                  const emotion = getEmotion(m.primary_mood);
                   return (
                     <motion.div
                       key={i}
@@ -263,7 +263,7 @@ function RevealContent() {
                 }`}
               >
                 {characters.map((char, i) => {
-                  const emotion = EMOTION_MAP[char.mood];
+                  const emotion = getEmotion(char.mood);
                   const rarity = RARITY_CONFIG[char.rarity];
                   return (
                     <motion.div

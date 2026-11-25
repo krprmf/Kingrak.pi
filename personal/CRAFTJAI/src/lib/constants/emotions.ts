@@ -68,3 +68,22 @@ export const EMOTION_MAP = {
 export type EmotionKey = keyof typeof EMOTION_MAP;
 export const ALL_EMOTIONS: EmotionKey[] = Object.keys(EMOTION_MAP) as EmotionKey[];
 export const EMOTION_LIST = ALL_EMOTIONS;
+
+export type EmotionInfo = { [K in keyof (typeof EMOTION_MAP)[EmotionKey]]: string };
+
+export const FALLBACK_EMOTION: EmotionInfo = {
+  animal: "ghost",
+  name: "Visitor",
+  color: "brown",
+  hex: "#b8694b",
+  quote: "A feeling still finding its name",
+  emoji: "👻",
+};
+
+export function isEmotionKey(value: unknown): value is EmotionKey {
+  return typeof value === "string" && Object.hasOwn(EMOTION_MAP, value);
+}
+
+export function getEmotion(mood: string | null | undefined): EmotionInfo {
+  return isEmotionKey(mood) ? EMOTION_MAP[mood] : FALLBACK_EMOTION;
+}

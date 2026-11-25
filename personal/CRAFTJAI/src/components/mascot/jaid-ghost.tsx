@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-import { EMOTION_MAP, type EmotionKey } from "@/lib/constants/emotions";
+import { getEmotion, type EmotionKey } from "@/lib/constants/emotions";
 import { useDialogue, useTalkOnHold } from "@/components/room/dialogue";
 
 // The room's companion, shown to users as "โกส": a shy, see-through blanket ghost.
@@ -27,7 +27,7 @@ const THAI_SENTENCE = /[\u0E00-\u0E7F]{4,}/;
 export function JaiDGhost({ lastResponse, lastMood, box }: JaiDGhostProps) {
   const { line, say, quiet } = useDialogue();
   const talking = line?.id === "ghost";
-  const glow = lastMood ? EMOTION_MAP[lastMood].hex : "#e3b261";
+  const glow = lastMood ? getEmotion(lastMood).hex : "#e3b261";
   const message = lastResponse && !THAI_SENTENCE.test(lastResponse) ? lastResponse : DEFAULT_MESSAGE;
 
   const talk = () =>

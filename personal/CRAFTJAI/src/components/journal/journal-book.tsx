@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from 
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, PenLine } from "lucide-react";
-import { EMOTION_MAP, type EmotionKey } from "@/lib/constants/emotions";
+import { getEmotion, type EmotionKey } from "@/lib/constants/emotions";
 import { btnPrimary, panel } from "@/components/game/ui";
 import { DateTicket, Doodle, GhostNote, MoodStamp, PaperSheet, TapedPhoto, TornNote, WashiTape } from "./scrapbook";
 
@@ -166,7 +166,7 @@ function DaySpread({ day }: { day: Day }) {
   const weekday = day.date.toLocaleDateString("en-US", { weekday: "long" });
   const date = day.date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
   const moods = [...new Set(day.entries.map((e) => e.mood).filter((m): m is EmotionKey => !!m))];
-  const accent = moods[0] ? EMOTION_MAP[moods[0]].hex : "#b8694b";
+  const accent = moods[0] ? getEmotion(moods[0]).hex : "#b8694b";
   const photos = day.entries.flatMap((e) => e.characters);
   const photoSize = photos.length === 1 ? "w-[72%]" : photos.length === 2 ? "w-[47%]" : "w-[40%]";
 
@@ -182,7 +182,7 @@ function DaySpread({ day }: { day: Day }) {
             <DateTicket weekday={weekday} date={date} seed={seed} />
             <div className="flex -space-x-3 pt-1">
               {moods.map((m, i) => (
-                <MoodStamp key={m} mood={m} color={EMOTION_MAP[m].hex} seed={seed} i={i} />
+                <MoodStamp key={m} mood={m} color={getEmotion(m).hex} seed={seed} i={i} />
               ))}
             </div>
           </div>

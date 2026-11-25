@@ -4,7 +4,7 @@ import { useMemo, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { EMOTION_MAP, ALL_EMOTIONS, type EmotionKey } from "@/lib/constants/emotions";
+import { getEmotion, ALL_EMOTIONS, type EmotionKey } from "@/lib/constants/emotions";
 import { btnPrimary, panel } from "@/components/game/ui";
 import { PaperSheet, WashiTape } from "@/components/journal/scrapbook";
 
@@ -123,7 +123,7 @@ export function CalendarView({ entries, longestStreak }: { entries: MirrorEntry[
                     {moods.length > 0 && (
                       <span className="mt-0.5 flex gap-0.5">
                         {moods.slice(0, 3).map((m) => (
-                          <span key={m} className="h-2 w-2 rounded-full" style={{ backgroundColor: EMOTION_MAP[m].hex }} />
+                          <span key={m} className="h-2 w-2 rounded-full" style={{ backgroundColor: getEmotion(m).hex }} />
                         ))}
                       </span>
                     )}
@@ -144,8 +144,8 @@ export function CalendarView({ entries, longestStreak }: { entries: MirrorEntry[
                     {!top && counts.length > 1 && <>{counts.length} feelings visited equally. </>}
                     {top && (
                       <>
-                        <span style={{ color: EMOTION_MAP[top.mood].hex }} className="font-semibold">
-                          {EMOTION_MAP[top.mood].name}
+                        <span style={{ color: getEmotion(top.mood).hex }} className="font-semibold">
+                          {getEmotion(top.mood).name}
                         </span>{" "}
                         ({top.mood}) visited most, {top.n} time{top.n === 1 ? "" : "s"}.
                       </>
@@ -155,13 +155,13 @@ export function CalendarView({ entries, longestStreak }: { entries: MirrorEntry[
                   {/* the month's feelings as one strip */}
                   <div className="flex h-3 overflow-hidden rounded-full border border-cozy-mocha/20">
                     {counts.map((c) => (
-                      <span key={c.mood} title={`${c.mood}: ${c.n}`} style={{ flex: c.n, backgroundColor: EMOTION_MAP[c.mood].hex }} />
+                      <span key={c.mood} title={`${c.mood}: ${c.n}`} style={{ flex: c.n, backgroundColor: getEmotion(c.mood).hex }} />
                     ))}
                   </div>
                   <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs capitalize text-cozy-mocha">
                     {counts.map((c) => (
                       <span key={c.mood} className="flex items-center gap-1">
-                        <span className="h-2 w-2 rounded-full" style={{ backgroundColor: EMOTION_MAP[c.mood].hex }} />
+                        <span className="h-2 w-2 rounded-full" style={{ backgroundColor: getEmotion(c.mood).hex }} />
                         {c.mood} {c.n}
                       </span>
                     ))}
@@ -186,7 +186,7 @@ export function CalendarView({ entries, longestStreak }: { entries: MirrorEntry[
                           {new Date(e.createdAt).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
                         </span>
                         {e.mood && (
-                          <span className="rounded-full px-2 py-0.5 font-semibold capitalize text-white" style={{ backgroundColor: EMOTION_MAP[e.mood].hex }}>
+                          <span className="rounded-full px-2 py-0.5 font-semibold capitalize text-white" style={{ backgroundColor: getEmotion(e.mood).hex }}>
                             {e.mood}
                           </span>
                         )}

@@ -4,7 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { JaiDGhost } from "@/components/mascot/jaid-ghost";
 import { DialogueProvider } from "@/components/room/dialogue";
 import { Hotspot } from "@/components/room/hotspot";
-import { EMOTION_MAP, ALL_EMOTIONS, type EmotionKey } from "@/lib/constants/emotions";
+import { getEmotion, ALL_EMOTIONS, type EmotionKey } from "@/lib/constants/emotions";
 import { PenLine, BookOpen, Sparkles, DoorOpen, ImagePlus, Flame, CalendarDays, User } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -113,7 +113,7 @@ export default async function HomePage() {
           {/* Latest diary scenes hang on the wall like photos */}
           {FRAME_SLOTS.map((slot, i) => {
             const c = frames[i];
-            const color = c ? EMOTION_MAP[c.mood as EmotionKey]?.hex : undefined;
+            const color = c ? getEmotion(c.mood).hex : undefined;
             return c ? (
               <Link
                 key={c.id}
@@ -184,7 +184,7 @@ export default async function HomePage() {
                   <span
                     key={m}
                     className="h-2 w-2 rounded-full"
-                    style={{ backgroundColor: met.has(m) ? EMOTION_MAP[m].hex : "#e7e5e4" }}
+                    style={{ backgroundColor: met.has(m) ? getEmotion(m).hex : "#e7e5e4" }}
                   />
                 ))}
               </span>

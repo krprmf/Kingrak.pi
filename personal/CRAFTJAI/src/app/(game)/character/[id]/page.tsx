@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
-import { EMOTION_MAP, type EmotionKey } from "@/lib/constants/emotions";
+import { getEmotion, type EmotionKey } from "@/lib/constants/emotions";
 import { RARITY_CONFIG, type RarityType } from "@/types/character";
 import { GameScene } from "@/components/game/scene";
 import { btnPrimary, btnSecondary, panel } from "@/components/game/ui";
@@ -23,7 +23,7 @@ export default async function CharacterDetailPage({ params }: { params: Promise<
   const { data: entry } = await supabase.from("diary_entries").select("*").eq("id", character.diary_entry_id).single();
 
   const mood = character.mood as EmotionKey;
-  const emotion = EMOTION_MAP[mood];
+  const emotion = getEmotion(mood);
   const rarity = RARITY_CONFIG[character.rarity as RarityType];
   const created = new Date(character.created_at);
   const date = created.toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" });
